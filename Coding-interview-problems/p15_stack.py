@@ -1,11 +1,12 @@
 """
-Author : Alok Tripathi
 Stack implementation in Python
 Logic:
    - Take a list as base data structure
    - Push item to end using list's append method.
    - Pop item, but returning the last item and deleting it.
    - Peek item but returning the last item
+   
+Author : Alok Tripathi
 """
 
 
