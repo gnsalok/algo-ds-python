@@ -1,0 +1,9 @@
+-----------------Coding-Problems------------------------
+Note - All Problems are implemented in Python.
+
+1. How to reverse Singly Linked List
+2. Find out duplicate number between 1 to N numbers.
+3. Find out middle index where sum of both ends is equal.
+4.Find all pairs (a, b) in an array such that a+b=c+d
+5.Minimum number of Appends needed to make a string palindrome
+6.Write a program to find common elements between two arrays.
