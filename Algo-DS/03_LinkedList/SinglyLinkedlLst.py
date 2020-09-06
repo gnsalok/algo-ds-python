@@ -12,30 +12,39 @@ Author : Alok Tripathi
 class Node:
     def __init__(self, data):
         self.data = data
-        self.next = None  # initially it's pointing to None
+        self.next = None  # initially it's pointing to None (Object reference)
 
 
 class LinkedList:
     def __init__(self):
         self.head = None
 
-    def insert(self, newNode):
+    def insertEnd(self, newNode):
+        ''' Inserting Node in the End '''
         if self.head is None:
             self.head = newNode
         else:
-            # making copy for traversal
+            # Making copy for traversal
             lastNode = self.head
 
-            # traversing list to last node and advancing the list
+            # Traversing list to last node and advancing the list
             while True:
                 if lastNode.next is None:
                     break
                 lastNode = lastNode.next
             lastNode.next = newNode
 
+    def insertHead(self, newNode):
+        ''' Inserting Node as a head node '''
+        # Creating TempNode to store the reference of the list
+        tempNode = self.head
+        self.head = newNode
+        self.head.next = tempNode
+        del tempNode
+
     def printList(self):
 
-        # if list is empty
+        # Checking list is empty
         if self.head is None:
             print("List is empty")
             return
@@ -53,12 +62,16 @@ if __name__ == "__main__":
 
     firstNode = Node("Alok")
     linkedList = LinkedList()
-    linkedList.insert(firstNode)
+    linkedList.insertEnd(firstNode)
 
     secondNode = Node("Akhil")
-    linkedList.insert(secondNode)
+    linkedList.insertEnd(secondNode)
 
     thirdNode = Node("Eklavya")
-    linkedList.insert(thirdNode)
+    linkedList.insertEnd(thirdNode)
+
+    fourthNode = Node("Shefali")
+    print(fourthNode)
+    linkedList.insertHead(fourthNode)
 
     linkedList.printList()
