@@ -2,7 +2,8 @@
 Singly Linked List Implementation in Python
 - Create a Node
 - Create Linked List
-- Add Node to linked list
+- Add Node to linked list (Start, End, Middle)
+- Delete a Node (Start, End, Middle)
 - Print Values in Linked List 
 
 Author : Alok Tripathi
