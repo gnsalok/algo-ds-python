@@ -19,6 +19,14 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
+    def listLength(self):
+        currNode = self.head
+        length = 0
+        while currNode is not None:
+            length += 1
+            currNode = currNode.next
+        return length
+
     def insertEnd(self, newNode):
         ''' Inserting Node in the End '''
         if self.head is None:
@@ -42,6 +50,24 @@ class LinkedList:
         self.head.next = tempNode
         del tempNode
 
+    def insertAt(self, newNode, pos):
+        ''' Inserting Node at desired position '''
+        currNode = self.head
+        currPos = 0
+
+        if pos < 0 or pos > self.listLength():
+            print("Invalid Position")
+            return
+
+        while True:
+            if currPos == pos:
+                previousNode.next = newNode
+                newNode.next = currNode
+                break
+            previousNode = currNode
+            currNode = currNode.next
+            currPos += 1
+
     def printList(self):
 
         # Checking list is empty
@@ -56,22 +82,31 @@ class LinkedList:
             print(currentNode.data)
             currentNode = currentNode.next
 
+    def deleteEnd(self):
+        lastNode = self.head
+        while lastNode.next is not None:
+            previousNode = lastNode
+            lastNode = lastNode.next
+        previousNode.next = None
+
 
 # Driver program
 if __name__ == "__main__":
 
-    firstNode = Node("Alok")
+    firstNode = Node(20)
     linkedList = LinkedList()
     linkedList.insertEnd(firstNode)
 
-    secondNode = Node("Akhil")
+    secondNode = Node(30)
     linkedList.insertEnd(secondNode)
 
-    thirdNode = Node("Eklavya")
-    linkedList.insertEnd(thirdNode)
+    thirdNode = Node(10)
+    linkedList.insertHead(thirdNode)
 
-    fourthNode = Node("Shefali")
-    print(fourthNode)
-    linkedList.insertHead(fourthNode)
+    # Passing data along with index
+    fourthNode = Node(15)
+    linkedList.insertAt(fourthNode, 1)
+
+    linkedList.deleteEnd()
 
     linkedList.printList()
