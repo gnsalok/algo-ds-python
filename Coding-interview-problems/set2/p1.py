@@ -58,7 +58,7 @@ class LinkedList:
             currPos += 1
 
     def reverse(self):
-        ''' Function to reverse the linked list'''
+        ''' Function to reverse the linked list - Iterative approach'''
         prev = None
         current = self.head
         while(current is not None):
