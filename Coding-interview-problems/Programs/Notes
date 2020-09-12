@@ -1,0 +1,20 @@
+--- Programs ---
+
+1. prog01 : swapping. (done)
+2. prog02 : string reversal (done)
+3. prog03 : fibonacci series (done)
+4. prog04 : Fibonacci with iterators
+5. prog05 : Two sum (done)
+6. prog06 : Two sum sorted array (done)
+7. prog07 : Minimum Size sub array  (done)
+8. prog08 : Remove duplicates from a sorted array (done)
+9. prog09 : Container with most water
+10. prog10 : valid paranthesis
+11. prog11 : longest valid paranthesis
+12. prog12 :  remove invalid paranthesis
+13. prog13 : valid palidrome
+14. prog14 : longest consecutive sequence
+15. prog15 : longest common sub sequence (done. Needs revision)
+16. prog16 : longest common substring (done, needs revision)
+17. prog17 :  longest increasing subsequence
+18. prog18 : maximum sum contigious sub array (done)
