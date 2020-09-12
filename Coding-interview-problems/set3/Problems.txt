@@ -1,3 +1,38 @@
 -----------------Coding-Problems------------------------
-List of 20 Coding Interview Programs.
+1. convert digital watch to binary watch
 
+2. find first duplicate character in the string
+
+3. Find whether 2 strings are anagrams :
+Fried --- fired
+Gainly – laying
+Sadder – dreads
+
+4. Suppose there are 2 strings source =”abcde” target =”ab” . Your program should return true if target is there in source. And also if the reverse of target is there in source
+
+5. An array has numbers from 1 to 20 . some of the numbers are missing if we sort the numbers in asending order. Find out the missing numbers.
+
+6. Find the first non repeating character in a string eg: helloworld h is the answer.
+
+7. Find the palindromic permutations for Malayalam.
+
+8. Give an array of anagrams [“Fried”, “Gainly” ,”fired”, “dreads” ,”laying”, “Sadder” ,”god”, “goat”]
+Group them as follows:
+[
+[“Fried”, ”fired”],
+[“Gainly”, ”laying”],
+[“dreads”, “Sadder”],
+[“god”],
+[“goat”]
+]
+
+9. Find out all palindromic substrings from a give string eg: aabbaacabcadadad
+
+
+10. Problem Statement:
+Line1 is a dictionary of words. Convert Line 2 to a meaningful sentence by referring to the words in Line1.
+Example1:
+// String line1 = "I,A,AM,HE,HERE";
+// String line2 = "IAMHERE";
+Solution :I AM HERE
+Example2:
