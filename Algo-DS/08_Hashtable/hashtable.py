@@ -10,9 +10,9 @@ def hash_function_str(key, table_size):
     for i in range(len(key)):
         ov = ov + ord(key[i])
 
-    print(ov%table_size)
+    print(ov % table_size)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     hash_function_str(33, 11)
-    hash_function_str('santos', 11)
+    hash_function_str("Alok", 11)

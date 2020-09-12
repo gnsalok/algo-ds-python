@@ -1,7 +1,7 @@
-''' Hashtable '''
+""" Hashtable """
+
 
 class Hashtable:
-
     def __init__(self, size):
         self.size = size
         self.slots = [None] * self.size
@@ -10,11 +10,11 @@ class Hashtable:
     def put(self, key, data):
         hashvalue = self.hashfunction(key, len(self.slots))
 
-        if not self.slots[hashvalue]:   # Add new value
+        if not self.slots[hashvalue]:  # Add new value
             self.slots[hashvalue] = key
             self.data[hashvalue] = data
         else:
-            if self.slots[hashvalue] == key:    # Override
+            if self.slots[hashvalue] == key:  # Override
                 self.data[hashvalue] = data
             else:
                 nextslot = self.rehash(hashvalue, len(self.slots))
@@ -27,10 +27,10 @@ class Hashtable:
                     self.data[nextslot] = data  # Override
 
     def hashfunction(self, key, size):
-        return key%size
+        return key % size
 
     def rehash(self, oldhashvalue, size):
-        return (oldhashvalue+1)%size
+        return (oldhashvalue + 1) % size
 
     def get(self, key):
         startslot = self.hashfunction(key, len(self.slots))
@@ -56,9 +56,9 @@ class Hashtable:
         self.put(key, data)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     h = Hashtable(5)
-    h[1] = 'one'
+    h[1] = "one"
     # h[2] = 'two'
     # h[3] = 'two'
     # h[4] = 'twooverlapped'

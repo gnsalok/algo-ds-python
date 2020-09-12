@@ -1,10 +1,9 @@
-
-'''
+"""
 Problem :  Find all pair a,b,c and d of array such that a+b = c+d 
 Solution : Using Hash Map, Time complexity is O(n**2), 
 Author : Alok Tripathi
 
-'''
+"""
 
 # function to find a, b, c, d such that
 # (a + b) = (c + d)
