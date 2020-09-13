@@ -1,10 +1,11 @@
+def fibonacci(size):
+    a = 0
+    b = 1
+    print(a)
+    print(b)
 
-
-def recur_fibo(n):
-   if n <= 1:
-       return n
-   else:
-       return(recur_fibo(n-1) + recur_fibo(n-2))
-
-
-print(recur_fibo(6))
+    for i in range(size - 1):
+        c = a + b
+        a = b
+        b = c
+        print(c)
