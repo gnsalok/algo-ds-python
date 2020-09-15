@@ -14,10 +14,10 @@ Sadder – dreads
 
 6. Find the first non repeating character in a string eg: helloworld h is the answer.
 
-7. Find the palindromic permutations for Malayalam.
+7. Find the palindromic permutations for Malayalam.  (Pending)
 
 8. Give an array of anagrams [“Fried”, “Gainly” ,”fired”, “dreads” ,”laying”, “Sadder” ,”god”, “goat”]
-Group them as follows:
+Group them as follows:  [Pending]
 [
 [“Fried”, ”fired”],
 [“Gainly”, ”laying”],
@@ -26,13 +26,13 @@ Group them as follows:
 [“goat”]
 ]
 
-9. Find out all palindromic substrings from a give string eg: aabbaacabcadadad
+9. Find out all palindromic substrings from a give string eg: aabbaacabcadadad  (Pending)
 
 
 10. Problem Statement:
-Line1 is a dictionary of words. Convert Line 2 to a meaningful sentence by referring to the words in Line1.
+Line1 is a dictionary of words. Convert Line 2 to a meaningful sentence by referring to the words in Line1.  (Pending)
 Example1:
 // String line1 = "I,A,AM,HE,HERE";
 // String line2 = "IAMHERE";
-Solution :I AM HERE
+Solution :I AM HERE                     
 Example2:

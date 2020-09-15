@@ -1,7 +1,6 @@
 -----------------Coding-Problems------------------------
 Note - All Problems are implemented in Python.
 
-1. Check AnagramString
-2. String problem
-15. Implement Stack Class
-16. Implementing Queue Class
+
+1. Implement Stack Class
+2. Implementing Queue Class

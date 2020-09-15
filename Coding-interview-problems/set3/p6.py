@@ -1,6 +1,8 @@
+'''
 # First Non Repeating char
 # Storing value and order of the char
 
+'''
 
 def firstNonRepeatingChar(str1):
     char_order = []
