@@ -1,7 +1,15 @@
+''' Problem Statement:
+Line1 is a dictionary of words. Convert Line 2 to a meaningful sentence by referring to the words in Line1.  (Pending)
+Example1:
+// String line1 = "I,A,AM,HE,HERE";
+// String line2 = "IAMHERE";
+Solution :I AM HERE                     
+'''
+
+
 class Solution(object): 
 	def wordBreak(self, s, wordDict): 
 		""" 
-		
 		:type s: str 
 		:type wordDict: List[str] 
 		:rtype: bool 
