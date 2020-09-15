@@ -1,20 +1,21 @@
-'''
+"""
 Problem : Write a program to find common elements between two arrays.
 Author : Alok Tripathi
 
-'''
+"""
 
 # Function to find common elements
 
 
 def common_ele(a, b):
+    # using set to remove duplicate
     a_set = set(a)
     print(a_set)
     b_set = set(b)
     print(b_set)
 
-    if (a_set & b_set):
-        print('Common elements: ')
+    if a_set & b_set:
+        print("Common elements: ")
         print(a_set & b_set)
     else:
         print("No common Found!")

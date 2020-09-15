@@ -7,9 +7,9 @@ Author : Alok Tripathi
 
 def getMissingNo(arr):
     n = len(arr)
-    total = (n + 1)*(n + 2)/2
+    total = (n + 1) * (n + 2) / 2  # Sum of n natural number
     sum_of_arr = sum(arr)
-    return int(total - sum_of_arr)
+    return int(total - sum_of_arr)  # sum of n natural no. - sum of array
 
 
 if __name__ == "__main__":
