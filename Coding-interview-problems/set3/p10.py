@@ -1,77 +1,34 @@
-''' Problem Statement:
-Line1 is a dictionary of words. Convert Line 2 to a meaningful sentence by referring to the words in Line1.  (Pending)
-Example1:
-// String line1 = "I,A,AM,HE,HERE";
-// String line2 = "IAMHERE";
-Solution :I AM HERE                     
-'''
+# Function to segment given into a space-separated
+# sequence of one or more dictionary words
+def wordBreak(dict, str, out=""):
 
+	# if we have reached the end of the String,
+	# print the output String
+	if not str:
+		print(out)
+		return
 
-class Solution(object): 
-	def wordBreak(self, s, wordDict): 
-		""" 
-		:type s: str 
-		:type wordDict: List[str] 
-		:rtype: bool 
-		"""
-		"""CREATING THE TRIE CLASS"""
-
-		class TrieNode(object): 
-			
-			def __init__(self): 
-				self.children = [] #will be of size = 26 
-				self.isLeaf = False
-			
-			def getNode(self): 
-				p = TrieNode() #new trie node 
-				p.children = [] 
-				for i in range(26): 
-					p.children.append(None) 
-				p.isLeaf = False
-				return p 
-			
-			def insert(self, root, key): 
-				key = str(key) 
-				pCrawl = root 
-				for i in key: 
-					index = ord(i)-97
-					if(pCrawl.children[index] == None): 
-						# node has to be initialised 
-						pCrawl.children[index] = self.getNode() 
-					pCrawl = pCrawl.children[index] 
-				pCrawl.isLeaf = True #marking end of word 
-			
-			def search(self, root, key): 
-				#print("Searching %s" %key) #DEBUG 
-				pCrawl = root 
-				for i in key: 
-					index = ord(i)-97
-					if(pCrawl.children[index] == None): 
-						return False
-					pCrawl = pCrawl.children[index] 
-				if(pCrawl and pCrawl.isLeaf): 
-					return True
+	for i in range(1, len(str) + 1):
+		# consider all prefixes of current String
+		prefix = str[:i]
 		
-		def checkWordBreak(strr, root): 
-			n = len(strr) 
-			if(n == 0): 
-				return True
-			for i in range(1,n+1): 
-				if(root.search(root, strr[:i]) and checkWordBreak(strr[i:], root)): 
-					return True
-			return False
-		
-		"""IMPLEMENT SOLUTION"""
-		root = TrieNode().getNode() 
-		for w in wordDict: 
-			root.insert(root, w) 
-		out = checkWordBreak(s, root) 
-		if(out): 
-			return "Yes"
-		else: 
-			return "No"
 
-print(Solution().wordBreak("thequickbrownfox", ["the", "quick", "fox", "brown"])) 
-print(Solution().wordBreak("bedbathandbeyond", ["bed", "bath", "bedbath", "and", "beyond"])) 
-print(Solution().wordBreak("bedbathandbeyond", ["teddy", "bath", "bedbath", "and", "beyond"])) 
-print(Solution().wordBreak("bedbathandbeyond", ["bed", "bath", "bedbath", "and", "away"])) 
+		# if the prefix is present in the dictionary, add prefix to the
+		# output and recur for remaining String
+		if prefix in dict:
+			wordBreak(dict, str[i:], out + " " + prefix)
+
+
+if __name__ == '__main__':
+
+	# List of Strings to represent dictionary
+	dict = [
+		"self", "th", "is", "famous", "Word",
+		"break", "b", "r", "e", "a", "k", "br",
+		"bre", "brea", "ak", "problem"
+	]
+
+	# input String
+	str = "Wordbreakproblem"
+
+	wordBreak(dict, str)

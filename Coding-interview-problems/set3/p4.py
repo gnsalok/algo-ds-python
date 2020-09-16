@@ -2,6 +2,7 @@
 Problem : Return true if target is present is source (string problem)
 Author : Alok Tripathi
 
+Note this sol. without using contains?
 """
 
 
