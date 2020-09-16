@@ -10,6 +10,7 @@ def firstNonRepeatingChar(str1):
     for c in str1:
         if c in counts:
             counts[c] += 1
+            print(counts)
         else:
             counts[c] = 1
             char_order.append(c)
