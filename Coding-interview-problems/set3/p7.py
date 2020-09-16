@@ -1,5 +1,8 @@
-# Python3 implementation to print all the 
+'''
 # palindromic permutations alphabetically 
+# refer solution p9.py for this problem
+
+'''
 
 # import library 
 import numpy as np 

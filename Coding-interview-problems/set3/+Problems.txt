@@ -14,7 +14,7 @@ Sadder – dreads
 
 6. Find the first non repeating character in a string eg: helloworld h is the answer.
 
-7. Find the palindromic permutations for Malayalam.  (Pending)
+7. Find the palindromic permutations for Malayalam.  (Prefer problem p9.py)
 
 8. Give an array of anagrams [“Fried”, “Gainly” ,”fired”, “dreads” ,”laying”, “Sadder” ,”god”, “goat”]
 Group them as follows:  [Pending]
