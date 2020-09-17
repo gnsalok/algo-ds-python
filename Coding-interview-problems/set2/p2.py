@@ -10,7 +10,7 @@ Problem :  Find out duplicate number between 1 to N numbers.
 
 
 def findDuplicate(arr, n):
-    return sum(arr) - (((n - 1) * n) // 2)
+    return sum(arr) - (((n - 1) * n) // 2)   #it will return int not float
 
 
 # Driver method
