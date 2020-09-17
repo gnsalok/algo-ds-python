@@ -36,3 +36,9 @@ Example1:
 // String line2 = "IAMHERE";
 Solution :I AM HERE                     
 Example2:
+
+
+11. Get all substrings of Given string
+
+12. Find the pairs in given array, which sum will same.
+  [1,2,3,4,5,]  - > {[5,1] [4,2]} {[3,2] [4,1]}  
