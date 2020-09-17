@@ -12,5 +12,5 @@ for s in check_string:
         count[s] = 1
 
 for key in count:
-    if count[key] > 1:
+    if count[key] > 1:  # if value will greater then 1 means it's duplicate 
         print(key, count[key])

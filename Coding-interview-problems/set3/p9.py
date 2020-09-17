@@ -13,8 +13,6 @@ class Solution:
       for i in range(len(s)):
          for j in range(i+1,len(s)+1):
             temp = s[i:j]
-            li = list(temp)
-            print(li)
             if temp == temp[::-1]:
                 counter+=1
       return counter
