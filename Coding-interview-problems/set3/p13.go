@@ -34,7 +34,7 @@ func getPairCount(arr []int, sum int) int {
 func main() {
 
 	arr := []int{1, 2, 3, 3, 4, 5}
-	sum := {}
+	sum := 5
 	pairCount := getPairCount(arr, sum)
 	fmt.Println(pairCount)
 

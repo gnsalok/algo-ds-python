@@ -29,7 +29,7 @@ Group them as follows:  [Pending]
 9. Find out all palindromic substrings from a give string eg: aabbaacabcadadad  (Pending)
 
 
-10. Problem Statement:
+10. Problem Statement:  Wordbreak Problem -- Use Recursion with DP(Memoization)
 Line1 is a dictionary of words. Convert Line 2 to a meaningful sentence by referring to the words in Line1.  (Pending)
 Example1:
 // String line1 = "I,A,AM,HE,HERE";
@@ -41,8 +41,9 @@ Example2:
 11. Get all substrings of Given string
 
 12. Given an array and group them as possible sum.  [PARTITION EQUAL SUBSET SUM ]
+[--> . Find all pairs (a, b) in an array such that a+b=c+d]
 
  Input Only this array :  [1,2,3,4,5,]  - > {[5,1] [4,2]} {[3,2] [4,1]}  
 
 
- 13. Given an array and group them as possible sum 
+ 13. Given an array and group them as possible sum (when target/sum is given, )
