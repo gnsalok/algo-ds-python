@@ -13,20 +13,19 @@ def findPairs(arr):
     # Traverse through all possible pairs of arr[]
     for i in range(n - 1):
         for j in range(i + 1, n):
-            sum = arr[i] + arr[j]
+            sum = arr[i] + arr[j]  # O(n^2)
 
         # Sum already present in hash
             if sum in Hash.keys():
+
                 # print previous pair and current
                 prev = Hash.get(sum)
                 print(str(prev) + " and (%d, %d)" % (arr[i], arr[j]))
-                return True
 
             else:
                 # sum is not in hash
                 # store it and continue to next pair
                 Hash[sum] = (arr[i], arr[j])
-    return False
 
 
 if __name__ == "__main__":

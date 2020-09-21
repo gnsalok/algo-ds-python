@@ -4,18 +4,19 @@ Author : Alok Tripathi
 
 '''
 
-class Solution:
-   def groupAnagrams(self, strs):
-      result = {}
-      for i in strs:
-         x = "".join(sorted(i))
-         if x in result:
+
+def groupAnagrams(strs):
+    result = {}
+    for i in strs:
+        x = "".join(sorted(i))
+        if x in result:
             result[x].append(i)
-         else:
+        else:
             result[x] = [i]
-      return list(result.values())
+
+    return list(result.values())
 
 
+if __name__ == "__main__":
 
-ob1 = Solution()
-print(ob1.groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+    print(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))

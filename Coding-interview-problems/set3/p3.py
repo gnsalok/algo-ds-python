@@ -5,13 +5,15 @@ Author : Alok Tripathi
 """
 
 
-def is_anagram(str1, str2):
-    list_str1 = list(str1)
-    list_str1.sort()
-    list_str2 = list(str2)
-    list_str2.sort()
+def check(s1, s2):
 
-    return (list_str1 == list_str2)
+    if(sorted(s1) == sorted(s2)):
+        print("The strings are anagrams.")
+    else:
+        print("The strings aren't anagrams.")
 
 
-print(is_anagram('surya', 'suray'))
+# driver code
+s1 = "listen"
+s2 = "silent"
+check(s1, s2)

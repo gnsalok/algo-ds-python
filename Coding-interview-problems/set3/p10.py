@@ -2,9 +2,6 @@
 Problem : WordBreak Problem 
 '''
 
-# Function to segment given into a space-separated
-# sequence of one or more dictionary words
-
 
 def wordBreak(dict, str, out=""):
 
