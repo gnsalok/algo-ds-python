@@ -4,8 +4,8 @@
 '''
 
 
-def findPairs(arr, n):
-
+def findPairs(arr):
+    n = len(arr)
     # Create an empty hashmap to store mapping
     # from sum to pair indexes
     Hash = {}
@@ -14,12 +14,14 @@ def findPairs(arr, n):
     for i in range(n - 1):
         for j in range(i + 1, n):
             sum = arr[i] + arr[j]
+
         # Sum already present in hash
             if sum in Hash.keys():
                 # print previous pair and current
                 prev = Hash.get(sum)
                 print(str(prev) + " and (%d, %d)" % (arr[i], arr[j]))
                 return True
+
             else:
                 # sum is not in hash
                 # store it and continue to next pair
@@ -28,7 +30,6 @@ def findPairs(arr, n):
 
 
 if __name__ == "__main__":
-    print("Hello world")
+
     arr = [1, 2, 3, 4, 5]
-    n = len(arr)
-    findPairs(arr, n)
+    findPairs(arr)

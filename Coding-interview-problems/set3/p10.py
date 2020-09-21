@@ -27,13 +27,8 @@ def wordBreak(dict, str, out=""):
 if __name__ == '__main__':
 
     # List of Strings to represent dictionary
-    dict = [
-        "self", "th", "is", "famous", "Word",
-        "break", "b", "r", "e", "a", "k", "br",
-        "bre", "brea", "ak", "problem"
-    ]
-
+    dict = ["I", "A", "AM", "HE", "HERE"]
     # input String
-    str = "Wordbreakproblem"
+    str = "IAMHERE"
 
     wordBreak(dict, str)
