@@ -5,6 +5,9 @@
 
 
 def findPairs(arr):
+    if not arr:  # Checking if array have None
+        print("list is empty")
+
     n = len(arr)
     # Create an empty hashmap to store mapping
     # from sum to pair indexes
