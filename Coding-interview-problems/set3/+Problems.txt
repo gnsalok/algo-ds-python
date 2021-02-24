@@ -4,9 +4,9 @@
 2. find first duplicate character in the string
 
 3. Find whether 2 strings are anagrams :
-Fried --- fired
-Gainly – laying
-Sadder – dreads
+        Fried --- fired
+        Gainly – laying
+        Sadder – dreads
 
 4. Suppose there are 2 strings source =”abcde” target =”ab” . Your program should return true if target is there in source. And also if the reverse of target is there in source
 

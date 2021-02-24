@@ -4,3 +4,6 @@ Note - All Problems are implemented in Python.
 
 1. Implement Stack Class
 2. Implementing Queue Class
+3. Convert BST from sorted array 
+4. Implement Linked List and insert value anywhere 
+5. Graphs 

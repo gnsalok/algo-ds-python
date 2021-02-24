@@ -9,6 +9,7 @@ def groupAnagrams(strs):
     result = {}
     for i in strs:
         x = "".join(sorted(i))
+        
         if x in result:
             result[x].append(i)
         else:

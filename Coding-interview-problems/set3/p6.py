@@ -4,6 +4,7 @@
 
 '''
 
+
 def firstNonRepeatingChar(str1):
     char_order = []
     counts = {}
@@ -20,4 +21,4 @@ def firstNonRepeatingChar(str1):
     return None
 
 
-print(firstNonRepeatingChar("helloworld"))
+print(firstNonRepeatingChar("hellowhorld"))
