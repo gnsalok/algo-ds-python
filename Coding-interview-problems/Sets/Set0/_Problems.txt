@@ -1,7 +1,0 @@
-************ Interview Problems ****************
-
-1. Factorial using recursion
-2. Fibonacci seires using recursion
-3. Log all pairs in an array 
-4. Find Common element in 2 array 
-5. First recurring char
