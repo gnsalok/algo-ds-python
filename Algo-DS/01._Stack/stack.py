@@ -54,3 +54,4 @@ if __name__ == "__main__":
     print(st.peek())
     print(st.size())
     print(st.isEmpty())
+    print(st.isEmpty)
