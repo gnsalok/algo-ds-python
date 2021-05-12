@@ -1,21 +1,14 @@
-
-def twoSum( nums, target):
-    d = {}
+def twoSum(nums, target):
+    seen = {}
     for i, n in enumerate(nums):
-        m = target - n
-        if m in d:
-            print("final return",d)
-            return [d[m], i]
+        comp = target - n
+        if comp in seen:
+            print("Got indexes",seen)
+            return [seen[comp], i]
         else:
-           
-            d[n] = i
-            print("upating ", d)
+            seen[n] = i
+            print("upating dict", seen)
             
-
-            
-
-
-
 
 list = [2,7,11,15]
 target = 9
