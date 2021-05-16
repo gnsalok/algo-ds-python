@@ -2,3 +2,4 @@
 
 1. Sort an array of 0s, 1s. (Binary array) (E)
 2. 3Sum (M)
+3. 2Sum
