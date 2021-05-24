@@ -1,5 +1,6 @@
 
 class Solution(object):
+    # dutch partitioning problem
     def sortColors(self, nums):
         low, mid, high = 0, 0, len(nums)-1    
         while(mid <= high):
