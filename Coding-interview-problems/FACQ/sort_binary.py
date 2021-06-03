@@ -20,10 +20,6 @@ def sort_binary(arr, n):
         
         
 
-
-
-     
-
 if __name__ == '__main__':
     listBinary = [0,0,1,0,0,1,0,1]
     ll = len(listBinary)
