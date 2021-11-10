@@ -20,3 +20,4 @@ if __name__ == "__main__":
     target = 9 
     print(sl.twoSum(arr, target))
     
+

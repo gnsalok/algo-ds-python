@@ -1,3 +1,10 @@
 {
-    "python.formatting.provider": "autopep8"
+    //Python 
+    "python.formatting.provider": "autopep8",
+
+    //CodeRunner
+    "code-runner.executorMap": {
+        "cpp": "cd $dir && g++ -std=c++11 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+    }
 }
+

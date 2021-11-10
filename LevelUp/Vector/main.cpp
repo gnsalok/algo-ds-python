@@ -10,7 +10,5 @@ int main(){
 
     cout<<arr.capacity() <<endl;
 
-
-
     return 0;
 }
