@@ -11,6 +11,7 @@ def sortBinaryArray(arr, n):
             #increment i-th element
             i = i + 1
             arr[j], arr[i] = arr[i], arr[j]
+        
 
 
 if __name__ == '__main__':
