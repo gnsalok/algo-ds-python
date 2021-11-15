@@ -37,5 +37,5 @@ class SimpleTree:
 
 
 if __name__ == '__main__':
-    tree = SimpleTree
+    tree = SimpleTree()
     print(tree)

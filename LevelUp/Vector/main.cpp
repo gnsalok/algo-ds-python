@@ -16,9 +16,12 @@ int main(){
 
     cout<<arr.capacity() <<endl;
 
+<<<<<<< HEAD
     for(int i=0; i<arr.size(); i++){
         cout<< arr[i] <<", ";
     }
 
+=======
+>>>>>>> c75dfc4c416c5808834cc2ebc42a362547518479
     return 0;
 }

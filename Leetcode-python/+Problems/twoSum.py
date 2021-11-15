@@ -9,9 +9,11 @@ class Solution(object):
             if y in map:
                 ans.insert(0,i) 
                 ans.insert(1,map[y]) 
+                return ans # return once found 
             else:
                 map[x] = i 
-        return ans
+                print(map)
+        
             
 
 if __name__ == "__main__":
@@ -20,3 +22,4 @@ if __name__ == "__main__":
     target = 9 
     print(sl.twoSum(arr, target))
     
+
