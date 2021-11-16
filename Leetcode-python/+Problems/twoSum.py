@@ -1,6 +1,6 @@
 class Solution(object):
     def twoSum(self, nums, target):
-        map = {}
+        map = []
         ans = []
         for i in range(len(nums)):
             x = nums[i]

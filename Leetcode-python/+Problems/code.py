@@ -1,39 +1,41 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.left = None 
-        self.right = None
+
+def pairSum(arr, sum):
+    map = {}
+    result = []
+
+    for i in range(len(arr)):
+        x = arr[i]
+        y = sum - arr[i]
+
+        if y in map:
+            result.insert(0,arr[i])
+            result.insert(1,y)
+        else:
+            map.append(arr[i])
+    return result
 
 
-class Tree:
-    "Binary Search Tree"
-    def __init__(self):
-        self.root = None 
+    '''
+    x=2
+    y= 9 - 2 = 7
 
-    def insert(self, data):
-        # if empty
-        if self.root is None:
-            self.root = Node(data)
-        
-        cur_node = self.root 
-        while True:
-            if cur_node.left is not None:
-                cur_node
 
+    map = {2:2, }
     
+    '''
+
+
+
+
+
+
+
 
 
 if __name__ == "__main__":
-    tree = Tree()
-    print(tree)
+    arr = [2,7,11,15]
+    sum = 9 
 
-    tree.insert(11)
-    tree.insert(12)
-    tree.insert(13)
-
-    print(tree)
-
-
-         
-
-        
+    res = pairSum(arr, sum)
+    print(res)
+    
