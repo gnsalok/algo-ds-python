@@ -18,15 +18,14 @@ sl = Solution()
 res = sl.majorityElement(list)
 print(res)
 
-# 3,2,3
+
 
 '''
 3:2 , 2:1
 len(num) --> 9 // 2 = 4
 
 Steps: 
-1. Put element count in the hashmap
+1. Put elements count in the hashmap and increase number for occurances.
 2. Any Count is greater than len//2 of array then return the number.
-
 '''
         
