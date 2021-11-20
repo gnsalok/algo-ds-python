@@ -1,8 +1,11 @@
-dict = {}
+# myset = set(["a", "b", "c"])
+# print(myset)
+# print(type(myset))
+  
+# # Adding element to the set
+# myset.add("d")
+# print(myset)
 
-num = 2
 
-dict[num] = dict.get(num, 0) + 2
 
-print(dict)
 
