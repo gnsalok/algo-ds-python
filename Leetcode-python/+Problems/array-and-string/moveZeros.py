@@ -1,5 +1,5 @@
 '''
-Leetcode #283
+Leetcode #283 -- Counting Sort - 
 Input : 0,1,0,3,12 --> 1,3,12,0,0 (Maintain the relative order)
 
 TC : O(2*N) --> O(N)
@@ -10,7 +10,7 @@ from typing import List
 class Solution:
     def moveZeros(self, nums: List[int]) -> None:
         j = 0
-        n = len(arr)
+        n = len(nums)
 
         for num in nums:
             if(num!=0):
