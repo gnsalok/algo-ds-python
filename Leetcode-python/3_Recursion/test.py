@@ -4,15 +4,26 @@
 
 TRUST --> Recursion 1.... (n-1) + n
 
+
+
+
 '''
 
 
 
-def sum(n):
+def hello(n):
+
     if(n == 1):
-        return 1
-    
-    return sum(n-1) + n
+        print("1")
+        return 
+    print(n)     # End to Top 
+    hello(n-1)
+    print(n)     # Top to End
 
 
-print(sum(10))
+
+
+
+
+hello(10)
+

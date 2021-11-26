@@ -8,7 +8,7 @@ fib(7) == 33 (sum of)
 
 def fib(n):
     if(n == 1):
-        return 0
+        return 
     if(n == 2):
         return 1
     return fib(n-1) + fib(n-2)

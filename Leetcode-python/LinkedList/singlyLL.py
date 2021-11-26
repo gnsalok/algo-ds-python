@@ -55,13 +55,15 @@ class LinkedList:
             self.head = temp.next
             temp = None 
             return 
-        
+
+        #Traverse till key
         while(temp.next.data != key):
             temp = temp.next
         
         target_node = temp.next
         temp.next = target_node.next # Making the link 
-        target_node.next = None 
+        target_node.next = None  # delete the link 
+       
 
     
 
@@ -94,6 +96,7 @@ if __name__ == "__main__":
     sll.printList()
 
     sll.deleteEle(123)
+    sll.deleteEle(11111)
     sll.printList()
 
 
