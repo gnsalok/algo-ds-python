@@ -9,16 +9,17 @@ from typing import List
 
 class Solution:
     def moveZeros(self, nums: List[int]) -> None:
-        j = 0
-        n = len(nums)
-
+        count = 0
         for num in nums:
-            if(num!=0):
-                nums[j] = num
-                j += 1
+            if(num != 0):
+                nums[count] = num
+                count += 1
+           
+        for i in range(count, len(nums)): 
+            nums[i] = 0
 
-        for x in range(j, n):
-            arr[x] = 0
+
+
 
 
 arr = [0,1,0,3,12]
