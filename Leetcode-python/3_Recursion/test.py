@@ -11,19 +11,28 @@ TRUST --> Recursion 1.... (n-1) + n
 
 
 
-def hello(n):
+# def hello(n):
 
-    if(n == 1):
-        print("1")
-        return 
-    print(n)     # End to Top 
-    hello(n-1)
-    print(n)     # Top to End
-
-
+#     if(n == 1):
+#         print("1")
+#         return 
+#     print(n)     # End to Top 
+#     hello(n-1)
+#     print(n)     # Top to End
 
 
 
 
-hello(10)
+
+
+# hello(10)
+
+
+import sys
+
+print(2**31)
+
+print("***********")
+
+print(sys.maxsize)
 
