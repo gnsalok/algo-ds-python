@@ -27,7 +27,6 @@ class Solution:
             else:
                 cur.next = list1
                 list1 = list1.next
-
             cur = cur.next
         
         while(list1):

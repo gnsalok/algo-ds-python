@@ -7,6 +7,17 @@ print(arr)
 
 
 '''
+Check this our as  well
+'''
+matrix = [[0 for x in range(5)]
+            for y in range(3)]
+matrix[1][1] = 1
+print(matrix)
+
+
+
+
+'''
 Not Recommended 
 '''
 row, col = (3,4)

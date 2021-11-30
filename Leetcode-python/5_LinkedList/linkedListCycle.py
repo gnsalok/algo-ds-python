@@ -1,6 +1,6 @@
 '''
 Find Cycle in the List.
-https://leetcode.com/problems/linked-list-cycle/
+ 
 
 
 '''
@@ -23,7 +23,7 @@ class Solution:
         turtle = head
         
         while(turtle and hare and hare.next):
-            hare = hare.next
+            hare = hare.next.next
             turtle = turtle.next
             
             if(turtle == hare):
