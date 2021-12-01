@@ -28,15 +28,15 @@ class LinkedList:
             self.head = target
             return
         
-        def getPos(pos):
+        def getPrev(pos):
             temp = self.head
             count = 1
-            if(count < pos):
+            while(count < pos):
                 temp = temp.next
                 count += 1
             return temp 
         
-        pre = getPos(pos)
+        pre = getPrev(pos)
         nextNode = pre.next
         pre.next = target
         target.next = nextNode
@@ -48,11 +48,10 @@ class LinkedList:
         if(temp is None):
             return 
 
-
         # CASE : Head Node Deletion 
         if(temp.data == key):
             self.head = temp.next
-            temp = Node
+            temp = None
 
         #Case : Delete in the middle
         while(temp.next.data != key):
@@ -63,33 +62,20 @@ class LinkedList:
         targetNode.next = None
 
 
-        
-
-
-
-
-    
-
-
 
 if __name__ == "__main__":
     print("Linked List Representation")
     ll = LinkedList()
     ll.head = Node(4)
 
-    second_node = Node(5)
+    second_node = Node(10)
     ll.head.next = second_node
 
     third_node = Node(6)
     second_node.next = third_node
 
     ll.insertAtPos(5,0)
-    ll.insertAtPos(10,6)
-
- 
     ll.deleteNode(6)
-    
-
     ll.display()
 
 

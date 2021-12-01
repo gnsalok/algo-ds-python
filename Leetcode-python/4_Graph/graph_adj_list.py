@@ -11,8 +11,8 @@ class Graph:
         self.graph[v1].append(v2)
 
     def printGraph(self):
-        for node in self.graph: # getting nodes 
-            for v in self.graph[node]: #getting values at node
+        for node in self.graph: # getting nodes <key in dict>
+            for v in self.graph[node]: # getting values at node <list values at per key>
                 print(node, "=>", v)
 
 
