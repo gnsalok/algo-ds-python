@@ -24,6 +24,7 @@ class Graph:
             for j in range(len(self.graph[i])):
                 if(self.graph[i][j]):
                     print(i, "-->",j)
+                    
 
 
 

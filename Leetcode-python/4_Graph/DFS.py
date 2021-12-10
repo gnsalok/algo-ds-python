@@ -1,6 +1,6 @@
 '''
 TC  : O(V+E)
-SC : O(V)
+SC : O(V)  [Vertex / Node]
 - We can implement any recursive algorithm using stacks. 
 - We are using stack for DFS.
 '''
