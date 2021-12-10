@@ -15,7 +15,7 @@ def print_pattern(n):
     print_pattern(n - 1)  # TRUST 
 
     for i in range(0, n):
-        print(i+1, end=" ")
+        print(i+1, end="")
     print("\n")
 
     

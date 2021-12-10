@@ -1,9 +1,6 @@
 '''
-DO Row and Col Zero in the matrix.
-
-
+Print Matrix in Python
 '''
 
-matrix = [[0]*4 for _ in range(3)]
-
+matrix = [[0 for x in range(4)] for y in range(3)]
 print(matrix)
