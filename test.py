@@ -1,21 +1,23 @@
 
-# matrix = [[0 for x in range(5)]
-#             for y in range(3)]
+def majority_element(nums):
+    map = {}
+    for num in nums:
+        map[num] = map.get(num,0) + 1
+    
+    for n in nums:
+        if(map[n] > len(num)//2):
+            return n
 
-# print(matrix)
+        
+    
 
 
+def main():
+    nums = [2,2,1,1,1,2,2]
+    res = majority_element(nums)
+    print(res)
 
-mat = [[0 for x in range(4)]
-        for y in range(3)]
 
+if __name__ == "__main__":
+    main()
 
-
-print(mat)
-
-print(mat[0][0])
-
-mat[0][0] = 1
-
-print(mat[0][0])
-print(mat)
