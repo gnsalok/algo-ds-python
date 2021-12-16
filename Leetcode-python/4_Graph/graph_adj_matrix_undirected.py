@@ -1,5 +1,6 @@
 '''
-Graph Implementation using Adjacency Matrix.
+- Graph Implementation using Adjacency Matrix.
+- Undirected Graph
 '''
 
 
@@ -17,12 +18,13 @@ class Graph:
     def insertEdge(self, v1, v2):
         if(self.withInBounds(v1,v2)):
             self.graph[v1][v2] = 1
-            self.graph[v2][v1] = 1
+            #self.graph[v2][v1] = 1
 
     def printGraph(self):
         print(self.graph)
         for i in range(self.noOfNode):
             for j in range(len(self.graph[i])):
+                print(i,j)
                 if(self.graph[i][j]):
                     print(i, "-->",j)
 
