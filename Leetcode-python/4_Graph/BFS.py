@@ -23,12 +23,13 @@ class Graph:
 
         while(queue):
             cur = queue.pop(0)
-            print(cur, end=" ")
+            print(cur, end="\n")
 
             for v in self.graph[cur]:
                 if(v not in visited):
                     queue.append(v)
                     visited.add(v)
+                    print("cur queue ->", v)
 
 
 g = Graph()

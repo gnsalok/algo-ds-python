@@ -23,13 +23,18 @@ class Graph:
             cur = st[-1]
             st.pop()   
 
-            if(cur not in visited):
-                print(cur,end=" ")
-                visited.add(cur)
+            # Validate: Do we really need to this check...  ??
+            # if(cur not in visited):
+            #     print(cur,end="\n")
+
+            visited.add(cur)
+            print(cur)
   
             for vertex in self.graph[cur]:
                 if(vertex not in visited):
                     st.append(vertex)
+                    print("cur stack->",vertex)
+                    
 
 
 g = Graph()
