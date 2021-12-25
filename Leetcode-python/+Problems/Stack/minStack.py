@@ -28,5 +28,16 @@ class MinStack:
 
     def getMin(self):
         #return min value in the stack : always on the top
-        return self.st[-1][1] if self.st else None 
+        if(self.st):
+            return self.st[-1][1]
+        return None
+       # return self.st[-1][1] if self.st else None         # One liner
 
+
+if __name__ == "__main__":
+    ms = MinStack()
+    ms.push(1)
+    ms.push(3)
+    ms.push(2)
+    
+    print(ms.top())
