@@ -28,4 +28,4 @@ def pattern(n):
     print("\n")
 
     
-pattern(10)
+pattern(5)

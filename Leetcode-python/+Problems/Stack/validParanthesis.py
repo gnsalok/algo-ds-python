@@ -22,7 +22,7 @@ class Solution:
                     st.pop()
                     continue
             st.append(character)
-        return len(st) == 0
+        return len(st) == 0  # return True when paranthesis is valid
 
 sl = Solution()
 print(sl.isValid('[}{]'))

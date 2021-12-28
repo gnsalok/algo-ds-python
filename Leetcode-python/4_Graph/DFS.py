@@ -15,8 +15,7 @@ class Graph:
         self.graph[v1].append(v2)
 
     def DFS(self, startNode):
-        visited = set()
-        st = []
+        visited = set()        st = []
         st.append(startNode)
 
         while(st):
