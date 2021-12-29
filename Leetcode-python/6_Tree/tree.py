@@ -1,5 +1,5 @@
 '''
-Tree : A tree in connected acyclic undirected graph. 
+Tree : A tree is "connected acyclic undirected graph". 
 
 
 '''
@@ -24,7 +24,7 @@ def preorder(node):
         inorder(node.left)
         inorder(node.right)
 
-# post-order traversal 
+# Post-order traversal 
 def postorder(node):
     if(node is not None):
         inorder(node.left)
@@ -32,5 +32,14 @@ def postorder(node):
         print(node.data)
 
 
+if __name__ == "__main__":
 
+   root =  Node(5)
+   root.left = Node(4)
+   root.right = Node(5)
+   root.left.left = Node(7)
 
+   preorder(root)
+   inorder(root)
+   postorder(root)
+   
