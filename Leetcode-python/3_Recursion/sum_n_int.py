@@ -11,6 +11,7 @@ def sumN(n):
 
     if(n == 0):
         return 0
+
     left_part = sumN(n-1)
     return left_part + n
 
