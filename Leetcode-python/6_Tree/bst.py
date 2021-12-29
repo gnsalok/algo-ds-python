@@ -2,151 +2,111 @@
 Binary Search Tree Implementation
 - Left < (Root) < Right
 
-Time Complexity : 
+Time Complexity : O(log(n))
 '''
 
-
 class Node:
-    def __init__(self, value):
+    def __init__(self, data):
         self.left = None
         self.right = None
-        self.data = value
+        self.data = data
 
-
-def insert(root, node):
-    if(root is None):
+def insertNode(root, node):
+    if(root is None):   # First Node insertion 
         root = node
-        return
-
+        return 
+    
     if(root.data < node.data):
+        # Insert right side in the tree
         if(root.right is None):
             root.right = node
         else:
-            insert(root.right, node)
+            insertNode(root.right, node)
     else:
+        # Insert left side in the tree
         if(root.left is None):
             root.left = node
         else:
-            insert(root.left, node)
+            insertNode(root.left, node)
 
+# Searching key in the tree
+def searchKey(node, key):
+    if(node is not None): # if node exist then only print data
+        print("Current Node", node.data)
 
-def preorder(node):
-    if(node is not None):
-        print(node.data)
-        preorder(node.left)
-        preorder(node.right)
-
-# Search Node in the tree
-def search(node, key):
-    print("Current node is", node.data)
     if(node is None):
-        print("No node found!")
-
+        print("No node found!!")
+        return None
     if(node.data == key):
-        print("Node found")
+        print("Node Found")
         return node
-    
     if(node.data < key):
-        return search(node.right, key)
-    return search(node.left, key)
+        return searchKey(node.right, key) #search right side of the tree
+    return searchKey(node.left, key) #search left side of the tree
+    
 
 def minValueNode(node):
     while(node.left is not None):
         node = node.left
     return node
 
+# Delete Node
 def deleteNode(node, key):
     if(node is None):
-        return node
-    # If the key to be deleted is smaller than the node's
-    # key then it lies in  left subtree
-    if key < node.data:
-        node.left = deleteNode(node.left, key)
-    # If the kye to be delete is greater than the node's key
-    # then it lies in right subtree
-    elif(key > node.data):
+        return None
+    
+    if(node.data < key):
         node.right = deleteNode(node.right, key)
-    # If key is same as node's key, then this is the node
-    # to be deleted
-    else:
-        # Node with only one child or no child
-        if node.left is None:
-            temp = node.right
+    elif(node.data > key):
+        node.left = deleteNode(node.left, key)
+    else:  #key is found 
+        if(node.left is None):
+            temp = node.right 
             node = None
-            return temp
-        elif node.right is None:
-            temp = node.left
-            node = None
-            return temp
-
-        # Node with two children: Get the inorder successor
-        # (smallest in the right subtree)
+            return temp 
+        elif(node.right is None):
+            temp = node.left 
+            node = None 
+            return temp 
         temp = minValueNode(node.right)
-        # Copy the inorder successor's content to this node
         node.data = temp.data
-        # Delete the inorder successor
         node.right = deleteNode(node.right, temp.data)
     return node
     
 
+# Pre-order traversal of the tree     
+def preorder(node):
+    if(node is not None):
+        print(node.data)
+        preorder(node.left)
+        preorder(node.right)
 
 
+if __name__ == "__main__":
+    #	         5
+    #       /  	      \
+    #     3	            7
+    #   /   \        /     \
+    #  2     4      6        8
 
-#	         5
-#       /  	      \
-#     3	            7
-#   /   \        /     \
-#  2     4      6        8
-tree = Node(5)
+    tree = Node(5) # Create root node
 
-#	         5
-#       /  	      \
-#     None	       None
-
-insert(tree, Node(3))
-
-#	         5
-#       /  	      \
-#     3	            None
-
-insert(tree, Node(2))
-
-#	         5
-#       /  	      \
-#     3	            None
-#   /
-#  2
-insert(tree, Node(4))
-
-#	         5
-#       /  	      \
-#     3	            None
-#   /   \
-#  2     4
-insert(tree, Node(7))
-
-#	         5
-#       /  	      \
-#     3	            7
-#   /   \
-#  2     4
-insert(tree, Node(6))
-
-#	         5
-#       /  	      \
-#     3	            7
-#   /   \        /
-#  2     4      6
-insert(tree, Node(8))
-
-#	         5
-#       /  	      \
-#     3	            7
-#   /   \        /     \
-#  2     4      6        8
+    insertNode(tree, Node(3))
+    insertNode(tree, Node(2))
+    insertNode(tree, Node(4))
+    insertNode(tree, Node(7))
+    insertNode(tree, Node(6))
+    insertNode(tree, Node(8))
 
 
-# 5 3 2 4 7 6 8
-preorder(tree)
+    print("*********Preorder************")
+    # # 5 3 2 4 7 6 8
+    preorder(tree)
 
-search(tree, 8)
+    print("*********Searching************")
+    searchKey(tree, 6)
+   
+
+    print("*********Deletion************")
+    deleteNode(tree,7)
+    preorder(tree)

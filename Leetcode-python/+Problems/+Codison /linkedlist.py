@@ -46,7 +46,7 @@ class LinkedList:
 
         if(temp is None):
             return 
-        
+        #deleting root node
         if(temp.data == val):
             self.head = temp.next
             temp = None
