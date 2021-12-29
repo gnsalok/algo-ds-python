@@ -1,6 +1,8 @@
 '''
 Binary Search Tree Implementation
 - Left < (Root) < Right
+
+Time Complexity : 
 '''
 
 
@@ -146,4 +148,5 @@ insert(tree, Node(8))
 
 # 5 3 2 4 7 6 8
 preorder(tree)
+
 search(tree, 8)
