@@ -18,6 +18,8 @@ class MinStack:
         if(curMin == None or curMin > x):
             curMin = x
         self.st.append((x,curMin))
+        print(x, curMin)
+        
 
     def pop(self):
         return self.st.pop() if self.st else None 
@@ -38,6 +40,19 @@ if __name__ == "__main__":
     ms = MinStack()
     ms.push(1)
     ms.push(3)
+    ms.push(0)
     ms.push(2)
     
+    
     print(ms.top())
+
+
+    '''
+    2, 1
+    3, 1
+    1, 1
+
+    ans::
+    stack - 1 
+    curMin - 0
+    '''
