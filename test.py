@@ -1,7 +1,7 @@
+ll = [1,2,3,4,5]
 
-ll = [1,2,3,4]
+key = 5
 
-for i,v in enumerate(ll):
-    i,v = v
-    print(i,v)
 
+hashed_key = hash()
+print(hashed_key)

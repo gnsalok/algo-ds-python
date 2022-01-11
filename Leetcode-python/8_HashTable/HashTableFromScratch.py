@@ -25,6 +25,8 @@ class HashTable:
         #create hash 
         hashed_key = hash(key) % self.size
 
+        print("Hashed", hash(key), " -- Hashed Value", hashed_key)
+
         #get bucket corr. index 
         bucket = self.hash_table[hashed_key]
 
