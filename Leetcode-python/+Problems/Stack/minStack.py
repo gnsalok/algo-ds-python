@@ -8,25 +8,40 @@ list(tuple/set)
 [3,2]
 '''
 
-class MinStack:
+class MinMaxStack:
     def __init__(self):
         self.st = []
 
     def push(self, x):
+        # Get Min 
         curMin = self.getMin()
-        #None is for first case 
+
+        # Get Max
+        curMax = self.getMax()
+
+        # None for base case 
+        # Current Min
         if(curMin == None or curMin > x):
             curMin = x
-        self.st.append((x,curMin))
-        print(x, curMin)
+        self.st.append((x,curMin, curMax))
         
-
+        # Append Current Max
+        if(curMax == None or curMax < x):
+            curMax = x
+        self.st.append((x, curMin, curMax))
+        
     def pop(self):
         return self.st.pop() if self.st else None 
 
     def top(self):
         #actual value in the stack
         return self.st[-1][0]
+
+    def getMax(self):
+        if(self.st):
+            #return max value (Actualvalue, MinValue, MaxValue)
+            return self.st[-1][2]
+        return None
 
     def getMin(self):
         #return min value in the stack : always on the top
@@ -37,14 +52,16 @@ class MinStack:
 
 
 if __name__ == "__main__":
-    ms = MinStack()
+    ms = MinMaxStack()
+    ms.push(4)
+    ms.push(5)
     ms.push(1)
-    ms.push(3)
-    ms.push(0)
     ms.push(2)
     
     
     print(ms.top())
+    print(ms.getMax())
+    print(ms.getMin())
 
 
     '''
