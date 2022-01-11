@@ -8,11 +8,21 @@ print(arr)
 
 '''
 Check this out as  well
+Res : [0,0,0,0,0][0,0,0,0,0][0,0,0,0,0]
 '''
 matrix = [[0 for x in range(5)]
             for y in range(3)]
 matrix[1][1] = 1
-print(matrix)
+print(matrix) 
+
+
+'''
+Creating bucket
+[[], [], []]
+'''
+
+bucket = [[] for _ in range(3)]
+print(bucket) 
 
 
 
