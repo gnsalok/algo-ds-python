@@ -3,12 +3,17 @@ Implement a Hash Function / Hash Function.
 
 HashMap
 Key - Value 
+(1 : Alok)
+(2 : Jeff)
 
-1 : Alok
-2 : Jeff
+Steps :
+1. Create bucket of size of table 
+2. INSERT : Create hash key [hash(key)%size], check if already exist. If yes, then update else append.
+3. GET : Get hash key, find bucket from hashkey. Check if key exist, If yes,then return value else return None.
+4. DELETE : Get hash key, find bucket from hashkey. Check if key exist, If yes, POP element else return. 
+5. PRINT : Print element in the list
 
 '''
-
 
 class HashTable:
     def __init__(self, size):
