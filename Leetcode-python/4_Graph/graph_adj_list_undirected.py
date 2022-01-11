@@ -12,7 +12,7 @@ class Graph:
         self.graph[v2].append(v1) #adding this link will make this program undirected graph 
 
     def printGraph(self):
-        for node in self.graph: # getting nodes 
+        for node in self.graph: # getting nodes >> {1: [5, 7], 5: [1, 2], 2: [5, 7], 7: [2, 1]})
             for v in self.graph[node]: #getting values at node
                 print(node, "=>", v)
 
