@@ -8,7 +8,6 @@ class newNode:
         self.data = key
         self.left = None
         self.right = None
-        self.hd = 0
 
 def printLeftView(root):
     if (root is None):

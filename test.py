@@ -1,29 +1,36 @@
-ll = [(1,2), (2,5), (9,8)]
-key = 9
-foundKey = False
+'''
+Code a Binary Tree
+
+'''
+
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
 
 
-for i,v in enumerate(ll):
-    rkey,rvalue = v
-    iteration = i
-    if(rkey == key):
-        foundKey = True
-        break
-
-if(foundKey):
-    print(i)
-    ll[iteration] = (3,10)
-
-
-print(ll)
+def inorder(node):
+    if(node is None):
+        return 
+    else:
+        inorder(node.left)
+        print(node.val)
+        inorder(node.right)
 
 
 
+if __name__ == "__main__":
+    root = Node(5)
+    root.left = Node(4)
+    root.right = Node(6)
+    root.left.left = Node(9)
+    root.right.right = Node(10)
+
+    inorder(root)   # 
 
 
-   
 
 
     
-    
-    
+        
