@@ -13,17 +13,17 @@ class Node:
 def printLevelOrder(root):
     h = height(root)
     print("height", h)
-    for i in range(1, h+1):
+    for i in range(0, h):
         printCurrentLevel(root, i)
 
 
 def printCurrentLevel(root, level):
     if root is None:
         return
-    if level == 1:
+    if level == 0:
         print(root.val, end=" ")
-    elif level > 1:
-        printCurrentLevel(root.left, level-1)
+    elif level > 0:
+        printCurrentLevel(root.left, level-1) 
         printCurrentLevel(root.right, level-1)
 
 def height(root):
