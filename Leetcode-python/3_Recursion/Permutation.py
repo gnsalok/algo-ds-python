@@ -10,7 +10,9 @@ def permutationHelper(arr, currentPermutation, permutations):
     else:
         for i in range(len(arr)):
             newArray = arr[:i] + arr[i+1:]
+            print("new arr",newArray)
             newPermutation = currentPermutation + [arr[i]]
+            print(newPermutation)
             permutationHelper(newArray, newPermutation, permutations)
 
 

@@ -13,30 +13,29 @@ def printLeftView(root):
     if (root is None):
         return
 
-    q = []
-    q.append(root)
+    queue = []
+    queue.append(root)
 
-    while(q):
+    while(queue):
         # number of nodes at current level
-        n = len(q)
-
+        n = len(queue)
         # Traverse all nodes of current level
-        for i in range(1, n+1):
-            temp = q[0]
-            q.pop(0)
+        for i in range(0, n):
+            temp = queue[0]
+            queue.pop(0)
 
             # Print the left most element
             # at the level
-            if (i == 1):
+            if (i == 0):
                 print(temp.data)
 
             # Add left node to queue
-            if (temp.left != None):
-                q.append(temp.left)
+            if (temp.left is not None):
+                queue.append(temp.left)
 
             # Add right node to queue
-            if (temp.right != None):
-                q.append(temp.right)
+            if (temp.right is not None):
+                queue.append(temp.right)
 
 
 
