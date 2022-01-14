@@ -11,12 +11,13 @@ def coinChange(coins, amount):
     dp = [INT_MAX] * (amount + 1)
     dp[0] = 0
 
-    for i in range(1, amount+1):
+    for i in range(1, amount+1): # iterating over amount
         for coin in coins:
             # coin that we are taking is less than or equal than amount
             if(coin <= i):
                 # update the dp array
                 dp[i] = min(dp[i-coin]+1, dp[i])
+                print("Interation", i,  "DP ->",dp[i])
     return dp[amount] if dp[amount] != INT_MAX else -1
 
 
