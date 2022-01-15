@@ -1,5 +1,7 @@
 '''
 Find missing no. in array.
+Formula:
+missing number = (sum of N no.) - (sum of array ele)
 '''
 
 
