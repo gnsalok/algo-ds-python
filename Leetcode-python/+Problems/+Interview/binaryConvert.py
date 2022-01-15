@@ -14,7 +14,7 @@ def getBinary(N):
     
    
 
-getBinary(8)
+getBinary(17)
 
 
 
