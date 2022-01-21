@@ -1,3 +1,5 @@
-num = 7
+list = [1,2,3,4,5]
+n = len(list)
 
-print(bin(num)[2:])
+for i in range(1,n+1):
+    print(list[i])

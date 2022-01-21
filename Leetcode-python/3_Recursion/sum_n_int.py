@@ -13,6 +13,7 @@ def sumN(n):
         return 0
 
     left_part = sumN(n-1)
+    print(left_part)
     return left_part + n
 
 

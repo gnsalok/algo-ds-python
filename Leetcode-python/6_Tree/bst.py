@@ -60,11 +60,11 @@ def deleteNode(node, key):
     elif(node.data > key):
         node.left = deleteNode(node.left, key)
     else:  #key is found 
-        if(node.left is None):
+        if(node.left is None): # if its have right child
             temp = node.right 
             node = None
             return temp 
-        elif(node.right is None):
+        elif(node.right is None): # if its have left child
             temp = node.left 
             node = None 
             return temp 
