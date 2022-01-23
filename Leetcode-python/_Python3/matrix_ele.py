@@ -1,4 +1,14 @@
+'''
+- Working with Matrix in Python3. 
+Syntax : [[0 for x in range(col)]
+            for y in range(row)]
 
+
+for i in range(2): # row 
+    for j in range(3): #col
+
+
+'''
 
 
 matrix = [[1 for x  in range(3)]
@@ -21,7 +31,3 @@ for i in range(2): # row
         
 
 print("Sum of first row :", sumFirstrow)
-
-        
-
-
