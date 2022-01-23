@@ -1,5 +1,6 @@
 '''
-Maximum sum subarray using Kadane's algorithm.
+- Maximum sum subarray using Kadane's algorithm.
+- It uses DP to keep track of maxEnding here, and maxSoFor 
 '''
 # Time O(N), Space O(1)
 
