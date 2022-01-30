@@ -8,7 +8,7 @@ class Node:
         return self
 
     def depthFirstSearch(self, array):
-        array.append(self.name)
+        array.append(self.name) #appeding nodes on each traversal recursively 
         for child in self.children:
             child.depthFirstSearch(array)
         return array
@@ -24,5 +24,5 @@ if __name__ == "__main__":
 
     # TODO graph.printGraph()
 
-    bfsResut = graph.depthFirstSearch([])
-    print("DFS Array", bfsResut)  # A B F G C
+    dfsResut = graph.depthFirstSearch([])
+    print("DFS Array", dfsResut)  # A B F G C
