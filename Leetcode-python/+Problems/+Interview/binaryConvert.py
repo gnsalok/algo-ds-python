@@ -10,7 +10,7 @@ def getBinary(N):
     if(N > 1):
         # print(N)
         getBinary(N // 2)
-    print(N%2, end = ' ')  # 1%2 = 1
+    print(N%2, end = '')  # 1%2 = 1
     
    
 

@@ -33,6 +33,7 @@ def height(root):
         lsh = height(root.left)
         rsh = height(root.right)
 
+
         if(lsh > rsh):
             return lsh + 1
         return rsh + 1
