@@ -14,27 +14,18 @@ class Graph:
     def insertEdge(self, v1, v2):
         self.graph[v1].append(v2)
 
-    def DFS(self, startNode):
-        visited = set()        
+    def DFS(self, startNode):     
         st = []
         st.append(startNode)
 
         while(st):
             cur = st[-1]
             st.pop()   
-
-            # Validate: Do we really need to this check...  ??
-            # if(cur not in visited):
-            #     print(cur,end="\n")
-
-            visited.add(cur)
-            print(cur)
-  
+            print(cur, end=" ")
+            
             for vertex in self.graph[cur]:
-                if(vertex not in visited):
-                    st.append(vertex)
-                    print("cur stack->",vertex)
-                    print("visited",visited)
+                st.append(vertex)
+                #print("cur stack->",vertex)
                     
 
 
@@ -48,13 +39,3 @@ g.insertEdge(6,9)
 g.DFS(2)  # 2 > 5 > 8 > 6 > 9 > 1
 
 
-
-
-
-
-
-
-
-    
-
-    
