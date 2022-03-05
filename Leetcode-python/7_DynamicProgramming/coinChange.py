@@ -1,3 +1,9 @@
+'''
+TIME : O(N * Coin)
+SPACE : O(N)  where N is the amount array that we are building & updating
+'''
+
+
 def coinChange(coins, amount):
     # if need to make 0, no need anything return
     if(amount <= 0):
@@ -14,6 +20,7 @@ def coinChange(coins, amount):
             if(coin <= amount):
                 # update the dp array
                 dp[amount] = min(dp[amount-coin]+1, dp[amount])
+    # dp[amount]  >> Min No. of coins required to get the amount
     return dp[amount] if dp[amount] != INT_MAX else -1
 
 
