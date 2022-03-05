@@ -20,7 +20,9 @@ def coinChange(coins, amount):
             if(coin <= amount):
                 # update the dp array
                 dp[amount] = min(dp[amount-coin]+1, dp[amount])
-    # dp[amount]  >> Min No. of coins required to get the amount
+    # dp[amount]  // Min No. of coins required to get the amount
+
+    # dp[amount] != INT_MAX // we didn't get the choine change
     return dp[amount] if dp[amount] != INT_MAX else -1
 
 
