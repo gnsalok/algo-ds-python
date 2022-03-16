@@ -23,7 +23,7 @@ def findDup(arr, n):
         if(n in seen):
             return n
         else:
-            seen.add()
+            seen.add(n)
     
 
 arr = [1, 2, 2, 3, 4 ,3]
