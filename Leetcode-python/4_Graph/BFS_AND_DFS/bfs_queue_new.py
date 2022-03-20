@@ -1,3 +1,8 @@
+'''
+BFS Implementation using Queue and python defaultdict.
+TC  : O(V+E)
+SC : O(V)
+'''
 
 from collections import defaultdict
 
