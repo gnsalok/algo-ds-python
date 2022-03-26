@@ -10,8 +10,10 @@ class Solution:
         for i, price in enumerate(prices):
             if(buyPrice > price):
                 buyPrice = price
+                print("BP : ", buyPrice)
             else:
                 profit = max(profit, price-buyPrice)
+                print("Profit : ",profit)
         return profit
 
 prices = [7,1,5,3,6,4]  
