@@ -4,7 +4,7 @@ from typing import List
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        buyPrice = 1<<32 #max int/float value
+        buyPrice = 1<<32 #max int/float value   
         profit = 0
 
         for i, price in enumerate(prices):
