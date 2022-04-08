@@ -1,3 +1,8 @@
+'''
+TC : O(N2)
+SC : O(1)
+'''
+
 def bubbleSort(array):
 	isSorted = False
 	
