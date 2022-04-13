@@ -5,6 +5,12 @@
     //CodeRunner
     "code-runner.executorMap": {
         "cpp": "cd $dir && g++ -std=c++11 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
-    }
+    },
+    "java.project.sourcePaths": [
+        "algo-ds-java/learning_java",
+        "algo-ds-java/learning-java",
+        "algo-ds-java/Array",
+        "algo-ds-java/leetcode-java/javanotes"
+    ]
 }
 
