@@ -1,14 +1,14 @@
 class Solution:
    def groupAnagrams(self, strs):
       result = {}
-      for i in strs:
+      for s in strs:
          # sorted returns list of items, need to convert into str
-         x = "".join(sorted(i))
+         x = "".join(sorted(s))
          print(x)
          if x in result:
-            result[x].append(i)
+            result[x].append(s)
          else:
-            result[x] = [i]
+            result[x] = [s]
       return list(result.values())
 ob1 = Solution()
 
