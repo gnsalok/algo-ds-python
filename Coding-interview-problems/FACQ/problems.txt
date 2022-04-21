@@ -1,7 +1,0 @@
-----------------Frequently Asked Coding Questions ---------------
-
-1. Sort an array of 0s, 1s. (Binary array) (E)
-2. 3Sum (M)
-3. 2Sum
-4. sort colors 
-5. 
