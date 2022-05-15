@@ -12,8 +12,8 @@ class Node:
         st = []
         st.append(startNode)
         while(st):
-            cur = st[-1]
-            st.pop()
+            cur = st.pop(-1)
+            
             array.append(cur.name)
             for child in cur.children:
                 st.append(child)
