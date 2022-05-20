@@ -3,7 +3,7 @@
   intervals = [[1, 2], [3, 5], [4, 7], [6, 8], [9, 10]]
   expected = [[1, 2], [3, 8], [9, 10]]
 
-  TC : O(n log(n))
+  TC : O(n log(n))  [Sort and Traverse intervals]
   SC : O(N)
 
   Algorithm :
