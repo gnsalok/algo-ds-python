@@ -12,9 +12,9 @@ class Solution(object):
             number = nums[i]
             goal = target - number
             if(goal in seen):
-                return [seen[goal], number]
+                return [goal, number]
             else:
-                seen[number] = number
+                seen[number] = True
         return -1
 
      

@@ -19,7 +19,7 @@ class Solution:
 
         while(head is not None):
             nextNode = head.next
-            head.next = helper
+            head.next = helper   # make backward link
             helper = head
             head = nextNode 
         return helper
