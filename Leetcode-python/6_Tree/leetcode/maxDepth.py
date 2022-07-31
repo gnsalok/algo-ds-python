@@ -21,7 +21,7 @@ maxDepth = 3 + 1 = 4
 
 Generic Solution = 1 + max(leftSubtreeHeight, rightSubtreeHeight)
 
-TC : Recursive : O(Height) ; Level Order : O(N)
+TC : Recursive : O(Height(N)) ; Level Order : O(N)
 SP : O(N)
 '''
 class Solution:
