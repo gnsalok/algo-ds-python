@@ -31,7 +31,9 @@ class Solution:
         
         left = self.maxDepth(root.left)
         right = self.maxDepth(root.right)
-        
+
+        print(left, " -- ", right, " Node : ", root.val, " -- Max Depth :", max(left, right) + 1)
+
         return max(left, right) + 1
         
         
