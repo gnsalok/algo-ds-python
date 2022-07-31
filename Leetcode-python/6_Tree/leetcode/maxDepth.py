@@ -1,11 +1,31 @@
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+
+'''
+max depth = height of tree + 1 ( {no. of edges on the longest downward path b/t root & leaf} + 1 )
+
+        1
+      /   \  
+    2
+   / \      3
+  4   5
+ /
+6  
+
+height = 3
+maxDepth = 3 + 1 = 4
+
+Generic Solution = 1 + max(leftSubtreeHeight, rightSubtreeHeight)
+
+TC : Recursive : O(Height) ; Level Order : O(N)
+SP : O(N)
+'''
 class Solution:
-    def maxDepth(self, root: Optional[TreeNode]) -> int:
+    def maxDepth(self, root) -> int:
         if(root is None):
             return 0
         
@@ -19,5 +39,14 @@ class Solution:
         
         
         
-        
+root = TreeNode(1)
+root.left = TreeNode(2)
+root.right = TreeNode(3)
+root.left.left = TreeNode(4)
+root.left.right = TreeNode(5)
+root.left.left.left = TreeNode(6)
+
+sl = Solution()
+maxDepth = sl.maxDepth(root)
+print("Max Depth of given Tree : ", maxDepth)
          
