@@ -10,11 +10,13 @@ print(arr)
 Check this out as  well
 Res : [0,0,0,0,0][0,0,0,0,0][0,0,0,0,0]
 '''
-matrix = [[0 for col in range(5)]
+matrix = [[[] for col in range(5)]
             for row in range(3)]
-matrix[1][1] = 1
-print(matrix) 
 
+print(matrix)
+for i in range(3): # row 
+    for j in range(5): # col
+        print(matrix[i][j])
 
 '''
 Creating bucket
