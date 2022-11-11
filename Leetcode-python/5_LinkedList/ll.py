@@ -27,19 +27,19 @@ class LinkedList:
             target.next = self.head
             self.head = target
             return
-        
-        def getPrev(pos):
-            temp = self.head
-            count = 1
-            while(count < pos):
-                temp = temp.next
-                count += 1
-            return temp 
-        
+
         pre = getPrev(pos)
         nextNode = pre.next
         pre.next = target
         target.next = nextNode
+        
+    def getPrev(pos):
+        temp = self.head
+        count = 1
+        while(count < pos):
+            temp = temp.next
+            count += 1
+        return temp 
 
     def deleteNode(self, key):
         temp = self.head
