@@ -16,7 +16,7 @@ def longestCommonSubsequence(str1, str2):
             else:
                 # immidiate top and left max compare based on key
                 lcs[i][j] = max(lcs[i-1][j], lcs[i][j-1], key = len)
-
+    # last row and last col
     return lcs[-1][-1]
 
 str1 = "ZXVVYZW"
