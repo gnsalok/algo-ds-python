@@ -16,11 +16,12 @@ class MinHeap:
 
     def buildHeap(self, array):
         # take last child child(means last ele) and apply formula (i-1)//2 to get the first parent
-        firstParentIdx = (len(array) - 1 - 1) // 2
-        for currIdx in reversed(range(firstParentIdx)):
+        firstParentIdx = (len(array) - 2) // 2
+        for currIdx in reversed(range(firstParentIdx + 1)):
             self.siftDown(currIdx, len(array)-1, array)
         return array
 
+    # O(n) time | O(1) time
     def siftDown(self, currentIndex, endIdx, heap):
         childOneIdx = currentIndex * 2 + 1
         # break if reach at leaf 
@@ -37,11 +38,12 @@ class MinHeap:
                 childOneIdx = currentIndex * 2 + 1
             else:
                 break
-
+    
+     # O(log n) time | O(1) time
     def siftUp(self, currentIdx, heap):
         parentIdx = (currentIdx - 1) // 2
         while(currentIdx > 0 and heap[currentIdx] < heap[parentIdx]):
-            self.swap(currentIdx, parentIdx, self.heap)
+            self.swap(currentIdx, parentIdx, heap)
             # if you swap currIdx <-> parentIdx, your currIdx should update with new node Idx
             # in order to calculate new parent
             currentIdx = parentIdx
