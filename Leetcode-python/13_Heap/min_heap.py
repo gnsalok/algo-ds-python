@@ -32,6 +32,7 @@ class MinHeap:
             else:
                 idxToSwap = childOneIdx
 
+            # if children in smaller than parent
             if(heap[idxToSwap] < heap[currentIndex]):
                 self.swap(currentIndex,idxToSwap, heap)
                 currentIndex = idxToSwap
