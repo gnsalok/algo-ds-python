@@ -15,7 +15,7 @@ def binarySearch(arr, target):
 
         if(arr[mid] == target):
             return mid
-        #if target is greater than mid then set left to min+1
+        #if target is greater than mid then set left to mid+1
         elif(arr[mid]< target):
             left = mid+1
         else:
@@ -25,7 +25,7 @@ def binarySearch(arr, target):
 
 
 if __name__ == "__main__":
-    arr = [10,11,12,13,14,15]
+    arr = [10,11,12,13,14,15]   # sorted array
     target = 15
     result = binarySearch(arr, target) #5
 
