@@ -40,7 +40,7 @@ Apart from the core topics, we have included solutions for various important pro
 * Logical/Mathematical Proof Techniques (contradiction, contrapositive, induction, cases)
 * Object-Oriented Programming (It is recommended to check out "Clean Code" by Robert Martin, especially the sections on the Single Responsibility Principle. Though not crucial for interviews, it is valuable to know.)
 
-## Authors
+## Lead Maintainer
 
 * **Alok Tripathi** - *Github* - [Alok Tripathi](https://github.com/gnsalok)
 
