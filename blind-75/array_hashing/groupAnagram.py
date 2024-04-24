@@ -1,5 +1,11 @@
 # https://leetcode.com/problems/group-anagrams/description/
 
+'''
+TC : O(NlogN)
+SC : O(N)
+
+'''
+
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         groupedAnagram = {}
