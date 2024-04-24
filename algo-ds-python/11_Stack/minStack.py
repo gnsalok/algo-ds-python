@@ -8,7 +8,7 @@ list(tuple/set)
 [3,2]
 '''
 
-class MinMaxStack:
+class MinStack:
     def __init__(self):
         self.st = []
 
