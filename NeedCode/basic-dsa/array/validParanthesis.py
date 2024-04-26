@@ -13,7 +13,13 @@ Output: true
 '''
 
 class Solution:
-
+    '''
+    - Make all the closing brackets as key in the map 
+    - Maintain a stack to keep track of top bracket (ie. opening bracket). 
+    - If closing bracket it gets, and match with similar oping bracket, pop the the element from stack.
+    - return True if stack is empty else, False.
+    '''
+    
     def isValid(self, s: str) -> bool:
         closeToOpen = {")":"(", "}":"{", "]":"["}
         stack = []
