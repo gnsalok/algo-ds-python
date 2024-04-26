@@ -4,6 +4,14 @@
 TC : O(NlogN)
 SC : O(N)
 
+
+Solution :
+1. Sort the char and convert in to string 
+2. Make sorted string as key in map.
+3. Check if key (sorted) is preset in dict,
+4. If Yes, then append original str. 
+else, put value at the sorted key in the map.
+
 '''
 
 class Solution:
