@@ -43,7 +43,7 @@ ll = LinkedList()
 
 ll.insertEnd(1) # 0th node
 ll.insertEnd(2) # 1st node
-ll.insertEnd(3) # 3rd node
+ll.insertEnd(3) # 2nd node
 
 ll.remove(1)
 
