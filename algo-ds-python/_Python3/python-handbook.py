@@ -37,7 +37,7 @@ for i in range(len(arr)-1, -1, -1):
     print(arr[i])
 
 
-# Fromatting print strings
+# Formatting print strings
 n = 12
 print("Hello {0} {1}".format(n, n+1))
 print(f"Hello {n}")
