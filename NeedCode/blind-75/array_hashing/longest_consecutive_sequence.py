@@ -1,6 +1,6 @@
 
 ''' 
-Longest Common Sequence : https://leetcode.com/problems/longest-consecutive-sequence/
+Longest consecutive Sequence : https://leetcode.com/problems/longest-consecutive-sequence/
 
 TC : O N
 SC : O N
