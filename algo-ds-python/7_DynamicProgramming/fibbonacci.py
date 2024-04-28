@@ -1,6 +1,11 @@
 '''
-1,2,3,4 .....
+
 0,1,1,2,3,5,8,13.....
+
+
+f(0) = 0
+f(1) = 1
+f(2) = 1
 
 fib(n) = fib(n-1) + fin(n-2)  for n > 2
 fib(7) == 33 (sum of)
@@ -27,7 +32,7 @@ For Recursive Solution
 # TC : O(n)
 # SP : O(1)
 def fib(n):
-    memoize={1:0, 2:1}
+    memoize={1:1, 2:1}
 
     if n in memoize:
         return memoize[n]
@@ -36,4 +41,4 @@ def fib(n):
     return memoize[n]
 
     
-print(fib(5))
+print(fib(3))
