@@ -12,21 +12,21 @@ class Node:
 
 # In-order traversal 
 def inorder(node):
-    if(node is not None):
+    if node:
         inorder(node.left)
         print(node.data, end=" ")
         inorder(node.right)
 
 # Pre-order traversal 
 def preorder(node):
-    if(node is not None):
+    if node:
         print(node.data, end=" ")
         inorder(node.left)
         inorder(node.right)
 
 # Post-order traversal 
 def postorder(node):
-    if(node is not None):
+    if node:
         inorder(node.left)
         inorder(node.right)
         print(node.data, end=" ")
