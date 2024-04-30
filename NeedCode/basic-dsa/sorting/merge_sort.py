@@ -26,7 +26,7 @@ def merge(arr, s, m, e):
 
     i = 0 # index for L
     j = 0 # index for R
-    k = s # index for arr
+    k    = s # index for arr
 
     # Merge the two sorted halfs into the original array
     while i < len(L) and j < len(R):
@@ -47,3 +47,9 @@ def merge(arr, s, m, e):
         arr[k] = R[j]
         j += 1
         k += 1
+
+
+
+input = [3,2,4,1,6]
+sortedArr = mergeSort(input, 0, len(input))
+print(sortedArr)
