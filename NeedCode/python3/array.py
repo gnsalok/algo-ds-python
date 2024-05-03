@@ -103,7 +103,7 @@ print(arr[0][0], arr[3][3])
 # This won't work
 # arr = [[0] * 4] * 4
 
-# 3 * 4 matrix 
-mat = [[0] * 4 for i in range(3)]
+# 3 (row) * 4 (col) matrix 
+mat = [[0] * 4 for row in range(3)]
 print(mat)
 

@@ -29,7 +29,7 @@ class Solution:
 Leetcode : sort colors 
 
 Time : O(N)
-Space : O(1)
+Space : O(1)v # No extra space required.
 
 Dutch-Partitoining Algorithm sorts in one pass.
 '''
