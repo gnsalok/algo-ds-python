@@ -9,6 +9,7 @@ TC : O N
 
 # Implementation of QuickSort
 def quickSort(arr, s, e):
+    # length of sub-array is <= 1 then arr is already sorted.
     if e - s + 1 <= 1:
         return
 
@@ -23,7 +24,7 @@ def quickSort(arr, s, e):
             arr[i] = tmp
             left += 1
 
-    # Move pivot in-between left & right sides
+    # Move pivot in-between ; replacing left ptr to pivot
     arr[e] = arr[left]
     arr[left] = pivot
     

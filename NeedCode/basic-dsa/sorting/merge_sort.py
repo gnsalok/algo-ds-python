@@ -1,6 +1,6 @@
 # Implementation of MergeSort
 def mergeSort(arr, s, e):
-    # base case
+     # length of sub-array is <= 1 then arr is already sorted.
     if e - s + 1 <= 1:
         return arr
 
@@ -13,7 +13,7 @@ def mergeSort(arr, s, e):
     # Sort the right half
     mergeSort(arr, m + 1, e)
 
-    # Merge sorted halfs
+    # Merge sorted half
     merge(arr, s, m, e)
     
     return arr
@@ -38,7 +38,7 @@ def merge(arr, s, m, e):
             j += 1
         k += 1
 
-    # One of the halfs will have elements remaining
+    # One of the half will have elements remaining
     while i < len(L):
         arr[k] = L[i]
         i += 1
