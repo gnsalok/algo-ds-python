@@ -1,4 +1,6 @@
-from collections import deque
+'''
+BFS / Level Order Traversal
+'''
 
 class Node:
     def __init__(self, val):
@@ -7,7 +9,7 @@ class Node:
         self.right = None
 
 def bfs(root):
-    queue = deque()
+    queue = []
 
     if root:
         queue.append(root)
@@ -16,7 +18,7 @@ def bfs(root):
     while len(queue) > 0:
         print("level: ", level)
         for i in range(len(queue)):
-            curr = queue.popleft()
+            curr = queue.pop(0)
             print(curr.val)
             if curr.left:
                 queue.append(curr.left)
