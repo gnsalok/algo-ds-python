@@ -22,20 +22,24 @@ def inorder(node):
         print(node.val, end=" ")
         inorder(node.right)
 
-## ITERATIVELY : It will give the sorted array output 
-def inorderInteratively(root):
-    stack = []
-    cur = root
-    while cur and stack:
-        while cur:
-            stack.append(cur)
-            cur = cur.left
-        cur = stack.pop()
-        print(cur.val)
-        cur = cur.right
-        
-        
-        
+## ITERATIVELY : 
+def DFS(root):
+    stack = [root]
+    visited = set()
+    result = []
+
+    while stack:
+        curNode = stack.pop()
+
+        if curNode not in visited:
+            visited.add(curNode)
+            result.append(curNode.val)
+
+            if curNode.left:
+                stack.append(curNode.left)
+            if curNode.right:
+                stack.append(curNode.right)
+    print(result)
 
 
 if __name__ == '__main__':
@@ -46,4 +50,5 @@ if __name__ == '__main__':
     root.right.right = Node(7)
     root.right.left = Node(5)
 
-    inorderInteratively(root)
+    # inorderInteratively(root)
+    DFS(root)
