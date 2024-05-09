@@ -42,7 +42,9 @@ class Heap:
         self.heap[1] = self.heap.pop()
         i = 1
         # Percolate down
+        # util there is no left child exist
         while 2 * i < len(self.heap):
+            # do we also have right child? (checking in build head array)
             if (2 * i + 1 < len(self.heap) and 
             self.heap[2 * i + 1] < self.heap[2 * i] and 
             self.heap[i] > self.heap[2 * i + 1]):
