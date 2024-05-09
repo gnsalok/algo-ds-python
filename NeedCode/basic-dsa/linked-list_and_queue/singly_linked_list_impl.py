@@ -16,7 +16,7 @@ class LinkedList:
         self.tail = self.tail.next
 
     def remove(self, index):
-        curr = self.head
+        curr = self.head # head is pointing to ListNode(-1) ; technically 0th node is -1 which needs to exclude
     
         while  index > 0 and curr:
             index -= 1
