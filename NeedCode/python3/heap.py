@@ -25,6 +25,7 @@ print(-1 * maxHeap[0])
 while len(maxHeap):
     print(-1 * heapq.heappop(maxHeap))
 
+print("HEAPIFY---")
 # Build heap from initial values
 arr = [2, 1, 8, 4, 5]
 heapq.heapify(arr)
