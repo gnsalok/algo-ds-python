@@ -14,6 +14,9 @@ def quickSort(arr, s, e):
         return
 
     pivot = arr[e]
+
+    # left ptr is for swap the value at the index where pivot is greater the ith Index.
+    # so that we can make sure value at left side of pivot is lesser and right side is greater.
     left = s # pointer for left side
 
     # Partition: elements smaller than pivot on left side
@@ -25,6 +28,7 @@ def quickSort(arr, s, e):
             left += 1
 
     # Move pivot in-between ; replacing left ptr to pivot
+    # arr[e] is nothing but pivot.
     arr[e] = arr[left]
     arr[left] = pivot
     
