@@ -46,8 +46,8 @@ class Heap:
         while 2 * i < len(self.heap):
             # do we also have right child? (checking in build head array)
             if (2 * i + 1 < len(self.heap) and 
-            self.heap[2 * i + 1] < self.heap[2 * i] and  # compare left and right child
-            self.heap[i] > self.heap[2 * i + 1]): 
+            self.heap[2 * i + 1] < self.heap[2 * i] and  # compare left and right child and don't swap value that side
+            self.heap[i] > self.heap[2 * i + 1]):  #check parent > right child
                 # Swap right child
                 tmp = self.heap[i]
                 self.heap[i] = self.heap[2 * i + 1]
