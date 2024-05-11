@@ -5,6 +5,8 @@ class TreeNode:
         self.right = None 
 
 def preorder(node):
+    if not node:
+        return
     if node:
         print(node.val, end=" ")
         preorder(node.left)
