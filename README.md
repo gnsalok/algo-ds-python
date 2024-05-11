@@ -30,6 +30,12 @@ In this repository, we have provided a wide range of solutions for different alg
 * Tries
 * Merge Sort and Quick Sort
 
+## Resources 
+- Think like programmer : https://www.youtube.com/playlist?list=PLKQ5LYb497AZIZe9dBWy8GwLluVaMQVj0
+- Recursion : https://youtube.com/watch?v=oKndim5-G94&t=0s
+- Backtracking : https://www.youtube.com/watch?v=gBC_Fd8EE8A&list=PLKQ5LYb497AZIZe9dBWy8GwLluVaMQVj0&index=22&t=655s
+- Dynamic Programming : https://www.youtube.com/watch?v=iv_yHjmkv4I
+
 ## Other Important Problems for Interviews
 
 Apart from the core topics, we have included solutions for various important problems that often arise during technical interviews:
