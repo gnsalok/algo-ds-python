@@ -25,11 +25,6 @@ def fib(n):
 - Bottom-up Dynamic Programming
     - Start from 0 
 '''
-
-
-'''
-Optimization : you can further optimize by using two pointer; as you just need two prev values.
-'''
 def fibDP(n):
     if n < 2:
         return n
@@ -41,10 +36,31 @@ def fibDP(n):
     for i in range(2, n):
         dp[i] = dp[i-1] + dp[i-2]
 
-    print(dp)
+    print(dp)   
     return dp[-1]
 
 
 print(fibDP(5))
+
+# ----------
+
+
+'''
+Optimization : you can further optimize by using two pointer; as you just need two prev values.
+'''
+# Dynamic Programming
+def dp(n):
+    if n < 2:
+        return n
+
+    dp = [0, 1]
+    i = 2
+    while i <= n:
+        tmp = dp[1]
+        dp[1] = dp[0] + dp[1]
+        dp[0] = tmp
+        i += 1
+    return dp[1]
+
 
 
