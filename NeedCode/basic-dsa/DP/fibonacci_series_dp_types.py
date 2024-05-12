@@ -47,6 +47,8 @@ print(fibDP(5))
 
 '''
 Optimization : you can further optimize by using two pointer; as you just need two prev values.
+SC : (1) here
+TC : O(N)
 '''
 # Dynamic Programming
 def dp(n):
