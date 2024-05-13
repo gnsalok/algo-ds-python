@@ -5,6 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+    # do inorder traversal and return if n == k
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
         n = 0
         stack = []
