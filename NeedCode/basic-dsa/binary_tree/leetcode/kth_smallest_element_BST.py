@@ -18,7 +18,7 @@ class Solution:
             # pop meaning visiting that node
             # - Check if that node is first kth smallest
             cur = stack.pop()
-            n += 1
+            n += 1 # each node processing just adding to a count and if it reaches to K, return it.
             if n == k:
                 return cur.val
             cur = cur.right

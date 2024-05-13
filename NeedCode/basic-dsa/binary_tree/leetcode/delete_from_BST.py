@@ -22,11 +22,12 @@ class Solution:
         elif key < root.val:
             root.left = self.deleteNode(root.left, key)
         else:
+            # 0 or 1 child case ; if left doest not exist return right (vice versa to right)
             if not root.left:
                 return root.right
             elif not root.right:
                 return root.left
-            else:
+            else: # 2 children case (somewhere in the middle)
                 min = self.getMinValue(root.right)
                 # replace min with BST root
                 root.val = min
