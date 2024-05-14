@@ -54,6 +54,12 @@ def dfsHelper(profit, weight, capacity, size):
 # Time: O(n * m), Space: O(n * m)
 # Where n is the number of items & m is the capacity.
 def memo(profit, weight, capacity):
+    '''
+    Note : -
+    if you see recursive solution, then profit and capacity params are changing (meaning, its keep calculating in recursive call)
+    Cache that information and use if when it attempt to calculate again.
+    '''
+
     # A 2D array with N  rows and M columns 
     N, M = len(profit), capacity
     cache = [[-1]+(M+1) for r in range(N)]
