@@ -23,14 +23,15 @@ ie. : absolute diff between 10-14 = 4 [sensorA/B[3]]
 1. Write an iterative function to solve the problem.
     - Important that parameter list is correct
 2. Write a "dispatcher" function. 
-    - Function that solve problem on minimal dataset
+    - Function that solve problem on minimal dataset ; # also known as base
         - In this case, when size parameter == 0 
     - Dispatcher call iterative function to handle non-minimal cases.
         - IMPORTANT: must pass smaller dataset to iterative function
             - In this case, passing size-1 for third parameter does the trick.
             - Means, Dispatcher must handle last element in the arrays.
 
-3. In dispatcher, replace call to iterative function "totalDiff" with dispatcher function "totalDiffDispatcher" itself. (yay!! It's Recursive solution)
+3. In dispatcher, replace call to iterative function "totalDiff" with dispatcher function "totalDiffDispatcher" itself. 
+(yay!! It's Recursive solution)
 
 
 
