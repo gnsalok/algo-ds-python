@@ -11,3 +11,9 @@
 - Aditya's Playlist : https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go 
 - DP Resouces (most rated) : https://leetcode.com/discuss/general-discussion/458695/Dynamic-Programming-Patterns
 - Make DP Simple : https://leetcode.com/discuss/study-guide/1490172/Dynamic-programming-is-simple
+
+
+### Google Interview Tips
+
+- https://alexgolec.dev/google-interview-questions-deconstructed-the-knights-dialer/
+- https://alexgolec.dev/tag/google-interview-questions/
