@@ -19,7 +19,7 @@ class Heap:
         i = len(self.heap) - 1
 
         # Percolate up
-        # if parent is greater than swap
+        # if parent is greater then swap
         while i > 1 and self.heap[i] < self.heap[i // 2]:
             tmp = self.heap[i]
             self.heap[i] = self.heap[i // 2]
