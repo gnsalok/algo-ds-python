@@ -1,22 +1,22 @@
 # def dfs(profit, weight, capacity):
 #     return dfsHelper(0, profit, weight, capacity)
 
-## top-down code
-# def dfsHelper(i, profit, weight, capacity):
-#     if i == len(profit):
-#         return 0
+# top-down code
+def dfsHelper(i, profit, weight, capacity):
+    if i == len(profit):
+        return 0
 
-#     # Skip item i
-#     maxProfit = dfsHelper(i + 1, profit, weight, capacity)
+    # Skip item i
+    maxProfit = dfsHelper(i + 1, profit, weight, capacity)
 
-#     # Include item i
-#     newCap = capacity - weight[i]
-#     if newCap >= 0:
-#         p = profit[i] + dfsHelper(i + 1, profit, weight, newCap)
-#         # Compute the max
-#         maxProfit = max(maxProfit, p)
+    # Include item i
+    newCap = capacity - weight[i]
+    if newCap >= 0:
+        p = profit[i] + dfsHelper(i + 1, profit, weight, newCap)
+        # Compute the max
+        maxProfit = max(maxProfit, p)
 
-#     return maxProfit
+    return maxProfit
 
 
 # Memoization Solution
