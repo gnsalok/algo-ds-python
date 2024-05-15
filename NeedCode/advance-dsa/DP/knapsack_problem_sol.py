@@ -101,6 +101,7 @@ def dp(profit, weight, capacity):
             skip = dp[i-1][c]
             include = 0
             if c - weight[i] >= 0:
+                                    # dp[row above][current capacity - weight of item in array]
                 include = profit[i] + dp[i-1][c - weight[i]]
             dp[i][c] = max(include, skip)
     return dp[N-1][M]
