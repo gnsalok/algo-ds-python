@@ -16,8 +16,7 @@ n = n << 1
 n = n >> 1
 
 
-
-
+# print(8>>1)
 # Counting Bits
 def countBits(n):
     
@@ -28,5 +27,5 @@ def countBits(n):
         n = n >> 1 # same as n // 2
     return count
 
-# 23 -> 
-print(countBits(23))
+# # 23 -> 
+print(countBits(8))
