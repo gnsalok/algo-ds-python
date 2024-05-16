@@ -6,7 +6,7 @@ class PrefixSum:
         for n in nums:
             total += n
             self.prefix.append(total)
-        
+    # Getting Sum between 2 points in O(1) operations.  
     def rangeSum(self, left, right):
         preRight = self.prefix[right]
         if left-1 >= 0:
