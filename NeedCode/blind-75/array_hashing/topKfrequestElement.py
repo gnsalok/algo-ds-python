@@ -1,5 +1,10 @@
 # https://leetcode.com/problems/top-k-frequent-elements/
 
+'''
+1. Make list from 0 to n+1
+2. Make index as frequency 
+
+'''
 
 from typing import Counter, List
 class Solution:
@@ -8,6 +13,8 @@ class Solution:
     TC : O N
     SP : O N
     '''
+
+    
     # Solution using hashmap
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         n = len(nums)

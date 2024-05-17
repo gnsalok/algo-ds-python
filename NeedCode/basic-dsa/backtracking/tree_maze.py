@@ -27,5 +27,6 @@ def leafPath(root, path):
         return True
     if leafPath(root.right, path):
         return True
-    path.pop()
+    path.pop()  ## this is important for backtracking ; if we add into array and find ohh this both we can't take 
+                ## then pop the element 
     return False
