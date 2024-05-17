@@ -40,7 +40,7 @@ def cycleStart(head):
         fast = fast.next.next
         if slow == fast:
             break
-
+    # make sure there is cycle exist otherwise return None
     if not fast or not fast.next:
         return None
     

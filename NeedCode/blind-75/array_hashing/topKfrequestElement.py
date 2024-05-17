@@ -1,6 +1,7 @@
 # https://leetcode.com/problems/top-k-frequent-elements/
 
-from typing import List
+
+from typing import Counter, List
 class Solution:
 
     '''
@@ -9,15 +10,31 @@ class Solution:
     '''
     # Solution using hashmap
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        seen = {}
-        frequency = [[] for i in range(len(nums+1))]
-        for n in nums:
-            seen[n] = seen.get(n,0) + 1
+        n = len(nums)
+        counter = Counter(nums)
+        buckets = [0] * (n+1)
 
-        for n, c in seen.items():
-            frequency[c].append(n)
+        for num, freq in counter.items():
+            if buckets[freq] == 0:
+                buckets[freq] = [num]
+            else:
+                buckets[freq].append(num)
+        
+        kFreqElements = []
 
-        return 
+        for i in range(n,0,-1):
+            if buckets[i] != 0:
+                kFreqElements.extend(buckets[i])
+            
+            if len(kFreqElements) == k:
+                return kFreqElements
+            
+
+
+           
+
+
+       
         
     
 
@@ -26,4 +43,4 @@ class Solution:
 
 
 sl = Solution()
-sl.topKFrequent([1,1,1,2,2,3], 2)
+sl.topKFrequent([1,1,4,2,2,3], 2)
