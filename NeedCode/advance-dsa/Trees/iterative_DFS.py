@@ -23,6 +23,20 @@ def inorder(root):
 
 
 # Time and space: O(n)
+def preorder(root):
+    stack = []
+    curr = root
+    while curr or stack:
+        if curr:
+            print(curr.val)
+            if curr.right:
+                stack.append(curr.right)
+            curr = curr.left
+        else:
+            curr = stack.pop()
+
+
+# Time and space: O(n)
 def postorder(root):
     stack = [root]
     visit = [False]
