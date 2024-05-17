@@ -27,7 +27,7 @@ def printLeveOrderTraversal(node):
            queue.append(curNode.right)
 
 
-# Recusive Method to show level order traversal
+# Recursive Method to show level order traversal
 
 
 
