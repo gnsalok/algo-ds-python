@@ -1,31 +1,42 @@
-# Time: O(n^2 * n!)
-def permutationsRecursive(nums):
-    return helper(0, nums)
+'''
+https://leetcode.com/problems/permutations/
+'''
+
+def permute(self, nums: List[int]) -> List[List[int]]:
+    result = []
+
+    def backtrack(used, current_perm):
+        if len(current_perm) == len(nums):
+            result.append(current_perm.copy())
+            return 
         
-def helper(i, nums):   
-    if i == len(nums):
-        return [[]]
-    
-    resPerms = []
-    perms = helper(i + 1, nums)
-    for p in perms:
-        for j in range(len(p) + 1):
-            pCopy = p.copy()
-            pCopy.insert(j, nums[i])
-            resPerms.append(pCopy)
-    return resPerms
+        for num in nums:
+            if num not in used:
+                used.add(num)
+                current_perm.append(num)
+                backtrack(used, current_perm)
+                current_perm.pop()
+                used.remove(num)
+    backtrack(set(), [])
+    return result
 
 
-# Time: O(n^2 * n!)
-def permutationsIterative(nums):
-    perms = [[]]
+# Example usage
+nums = [1, 2, 3]
+permutations = permute(nums)
+print(permutations)
 
-    for n in nums:
-        nextPerms = []
-        for p in perms:
-            for i in range(len(p) + 1):
-                pCopy = p.copy()
-                pCopy.insert(i, n)
-                nextPerms.append(pCopy)
-        perms = nextPerms
-    return perms
+
+'''
+Explanation :
+Iterate over unused numbers:
+    - Loop through each number (num) in nums.
+    - If num is not present in the used set:
+    - Add num to the used set to mark it as used in the current permutation.
+    - Append num to the current_perm list.
+    - Call backtrack recursively to explore permutations with the current choice (num) included.
+    After the recursive call (exploring possibilities with num), backtrack by:
+    - Removing num from the current_perm list.
+    - Removing num from the used set to allow it for future permutations.
+
+'''
