@@ -1,5 +1,8 @@
 '''
 https://leetcode.com/problems/permutations/
+
+The time complexity of the provided backtracking solution to find all permutations of 
+a distinct integer array is O(n!), where n is the length of the input array.
 '''
 
 def permute(self, nums: List[int]) -> List[List[int]]:
