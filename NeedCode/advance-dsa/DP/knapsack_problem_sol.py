@@ -136,4 +136,4 @@ def optimizedDp(profit, weight, capacity):
 profit = [4, 4, 7, 1]
 weight = [5, 2, 3, 1]
 cap = 8
-print(dfs(profit, weight, cap)) # 12
+print(dp(profit, weight, cap)) # 12
