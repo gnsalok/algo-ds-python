@@ -31,7 +31,7 @@ Leetcode : sort colors
 Time : O(N)
 Space : O(1)v # No extra space required.
 
-Dutch-Partitoining Algorithm sorts in one pass.
+Dutch-Partitioning Algorithm sorts in one pass.
 '''
 
 def sortColors(nums):

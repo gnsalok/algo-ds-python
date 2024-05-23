@@ -10,13 +10,16 @@ def dfsHelper(i, profit, weight, capacity):
 
     maxProfit = 0
 
+    # skip item i
+    maxProfit = dfsHelper(i+1, profit, weight, capacity)
+
     # Include item i
     newCap = capacity - weight[i]
     if newCap >= 0:
                     # include the profit at pos
-        maxProfit = max(profit[i] + dfsHelper(i + 1, profit, weight, newCap), 
-                        # not include the profit
-                        dfsHelper(i + 1, profit, weight, capacity))
+        p = profit[i] + dfsHelper(i + 1, profit, weight, newCap)
+        maxProfit = max(maxProfit, p)
+                        
     return maxProfit
 
 # Memoization Solution
@@ -133,4 +136,4 @@ def optimizedDp(profit, weight, capacity):
 profit = [4, 4, 7, 1]
 weight = [5, 2, 3, 1]
 cap = 8
-print(memoizationHashMap(profit, weight, cap)) # 12
+print(dfs(profit, weight, cap)) # 12
