@@ -5,7 +5,9 @@ The time complexity of the provided backtracking solution to find all permutatio
 a distinct integer array is O(n!), where n is the length of the input array.
 '''
 
-def permute(self, nums: List[int]) -> List[List[int]]:
+from typing import List
+
+def permute(nums: List[int]) -> List[List[int]]:
     result = []
 
     def backtrack(used, current_perm):
