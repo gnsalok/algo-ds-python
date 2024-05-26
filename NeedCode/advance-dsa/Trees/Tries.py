@@ -24,7 +24,7 @@ class Trie:
         #  DONT forget to mark work as TRUE in the end.
         # WHY? You inserted "apple" doesn't mean you insert "ap" as well.
         curr.word = True 
-
+        
     def search(self, word):
         curr = self.root
         for c in word:
@@ -40,3 +40,13 @@ class Trie:
                 return False
             curr = curr.children[c]
         return True
+
+
+trie = Trie()
+trie.insert("alok")
+trie.insert("apple")
+
+
+print(trie.startsWith("ap"))
+print(trie.startsWith("al"))
+

@@ -36,7 +36,9 @@ class Solution:
             if len(kFreqElements) == k:
                 return kFreqElements
             
-
+nums = [1,2,2,2,3,3,3]
+sl = Solution()
+print(sl.topKFrequent(nums, 2))
 
            
 
