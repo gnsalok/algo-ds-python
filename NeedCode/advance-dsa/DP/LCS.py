@@ -88,7 +88,7 @@ def dp(s1, s2):
     for i in range(N):
         for j in range(M):
             if s1[i] == s2[j]:
-                dp[i+1][j+1] = 1 + dp[i][j]
+                dp[i+1][j+1] = 1 + dp[i][j] # look to top left diagonally (we didn't decrement i and j because we already going from i+1, j+1). Draw it.
             else:
                 dp[i+1][j+1] = max(dp[i][j+1], dp[i+1][j])
     return dp[N][M]
