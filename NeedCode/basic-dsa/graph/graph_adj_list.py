@@ -39,7 +39,7 @@ def dfs(node, target, adjList, visit):
     visit.add(node)
     for neighbor in adjList[node]:
         count += dfs(neighbor, target, adjList, visit)
-    visit.remove(node)
+    visit.remove(node) # while backtracking we need to remove it from Path to count another
 
     return count
 
