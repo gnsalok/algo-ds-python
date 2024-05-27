@@ -15,7 +15,7 @@ def shortestPath(edges, n, src):
         adj[s].append([d, w])
 
     shortest = {}
-    minHeap = [[0, src]]
+    minHeap = [(0, src)]
     while minHeap:
         w1, n1 = heapq.heappop(minHeap)
         if n1 in shortest:
@@ -24,5 +24,5 @@ def shortestPath(edges, n, src):
 
         for n2, w2 in adj[n1]:
             if n2 not in shortest:
-                heapq.heappush(minHeap, [w1 + w2, n2])
+                heapq.heappush(minHeap, (w1 + w2, n2))
     return shortest
