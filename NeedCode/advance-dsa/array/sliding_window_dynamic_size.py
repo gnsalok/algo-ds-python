@@ -1,4 +1,4 @@
-# Find the length of longest subarray with the same 
+# Find the length of longest subarray with the same number
 # value in each position: O(n)
 def longestSubarray(nums):
     length = 0

@@ -25,5 +25,5 @@ def containsDuplicate(arr: List, k: int) -> bool:
     return False
 
 arr = [1,1]
-k = 3
+k = 2
 print(containsDuplicate(arr, k))
