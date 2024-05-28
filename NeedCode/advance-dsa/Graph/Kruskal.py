@@ -1,5 +1,10 @@
 import heapq 
 
+'''
+TC : O(E * logV), where E is number of edges and V is number of vertices.
+SC : O(E + V), where E is number of edges and V is number of vertices.
+'''
+
 class UnionFind:
     def __init__(self, n):
         self.par = {}
