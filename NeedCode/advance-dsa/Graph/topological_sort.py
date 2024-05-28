@@ -1,5 +1,9 @@
 # Given a directed acyclical graph, return a valid
 # topological ordering of the graph. 
+
+# what is time complexity of topological sort?
+# O(V + E), where V is number of vertices and E is number of edges.
+
 def topologicalSort(edges, n):
     adj = {}
     for i in range(1, n + 1):

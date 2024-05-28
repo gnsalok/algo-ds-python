@@ -1,5 +1,5 @@
 '''
-Union Find 
+Union Find (Disjoint Set)
 
 Time complexity : O(m) ; where m in no. of edges
 
@@ -44,3 +44,13 @@ class UnionFind:
             self.par[p1] = p2
             self.rank[p2] += 1
         return True
+    
+    # look parents of all node
+    def printParent(self):
+        print(self.par)
+        
+
+u = UnionFind(5)
+print(u.union(1,2))
+print(u.union(2,3))
+print(u.printParent())

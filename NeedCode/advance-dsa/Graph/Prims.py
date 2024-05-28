@@ -2,7 +2,14 @@ import heapq
 
 # Given a list of edges of a connected undirected graph,
 # with nodes numbered from 1 to n,
-# return a list edges making up the minimum spanning tree.
+# Return a list edges making up the minimum spanning tree.
+
+'''
+Note : 
+- Here we are returning list of edges, so that we can return the edges which are part of minimum spanning tree.
+
+TC : O(E * logV)
+'''
 def minimumSpanningTree(edges, n):
     adj = {}
     for i in range(1, n + 1):
