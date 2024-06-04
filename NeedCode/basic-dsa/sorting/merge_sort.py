@@ -1,55 +1,41 @@
-# Implementation of MergeSort
-def mergeSort(arr, s, e):
-     # length of sub-array is <= 1 then arr is already sorted.
-    if e - s + 1 <= 1:
-        return arr
+## ---------------------------------------------------
+# Merge Sort Simplify with Python
+## ---------------------------------------------------
 
-    # The middle index of the array
-    m = (s + e) // 2
-
-    # Sort the left half
-    mergeSort(arr, s, m)
-
-    # Sort the right half
-    mergeSort(arr, m + 1, e)
-
-    # Merge sorted half
-    merge(arr, s, m, e)
+def merge_sort(data):
+    if len(data) <= 1:
+        return data
     
-    return arr
+    mid = len(data) // 2
+    left_half = data[:mid]
+    right_half =  data[mid:]
 
-# Merge in-place
-def merge(arr, s, m, e):
-    # Copy the sorted left & right halfs to temp arrays
-    L = arr[s: m + 1]
-    R = arr[m + 1: e + 1]
+    # recursively sort left and right half
+    left_sorted = merge_sort(left_half)
+    right_sorted = merge_sort(right_half)
 
-    i = 0 # index for L
-    j = 0 # index for R
-    k    = s # index for arr
+    # merge the sorted half
+    merged_data = []
+    i = 0
+    j = 0
 
-    # Merge the two sorted halfs into the original array
-    while i < len(L) and j < len(R):
-        if L[i] <= R[j]:
-            arr[k] = L[i]
+    while i < len(left_sorted) and j < len(right_sorted):
+        if left_sorted[i] <= right_sorted[j]:
+            merged_data.append(left_sorted[i])
             i += 1
         else:
-            arr[k] = R[j]
+            merged_data.append(right_sorted[j])
             j += 1
-        k += 1
+    
+    # append the remaining element from either half
+    merged_data += left_sorted[i:]
+    merged_data += right_sorted[j:]
 
-    # One of the half will have elements remaining
-    while i < len(L):
-        arr[k] = L[i]
-        i += 1
-        k += 1
-    while j < len(R):
-        arr[k] = R[j]
-        j += 1
-        k += 1
+    return merged_data
+
 
 
 
 input = [3,2,4,1,6]
-sortedArr = mergeSort(input, 0, len(input))
+sortedArr = merge_sort(input)
 print(sortedArr)
