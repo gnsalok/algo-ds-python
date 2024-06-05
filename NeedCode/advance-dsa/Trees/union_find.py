@@ -3,6 +3,11 @@ Union Find (Disjoint Set)
 
 Time complexity : O(m) ; where m in no. of edges
 
+Where,
+- doing Union is constant time operation.
+- Find function runs on linear time. where m is the no. of edges in the graph.
+
+
 Uses :
 - It is used to do cycle detection in graph.
 - This Data Structure is utilized in Kruskal Algorithm.
