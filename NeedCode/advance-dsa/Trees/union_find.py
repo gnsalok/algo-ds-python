@@ -5,7 +5,7 @@ Time complexity : O(m) ; where m in no. of edges
 
 Uses :
 - It is used to do cycle detection in graph.
-- This Data Structure is utilized in Kruskal's Algorithms.
+- This Data Structure is utilized in Kruskal Algorithm.
 
 You can do walkthrough on given Edges -> [[1,2], [4,1], [2,4]]
 
@@ -53,4 +53,7 @@ class UnionFind:
 u = UnionFind(5)
 print(u.union(1,2))
 print(u.union(2,3))
-print(u.printParent())
+print(u.union(3,4))
+print(u.union(4,5))
+print(u.union(4,3)) # we can't union them, as parent are same
+u.printParent()

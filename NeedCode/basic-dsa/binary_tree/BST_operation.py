@@ -1,7 +1,7 @@
 '''
 BST Operations:
-- inserting and removing node 
-
+- inserting : log(N)
+- removing node : log(N)
 '''
 
 class TreeNode:
