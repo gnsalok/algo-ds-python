@@ -22,25 +22,23 @@ def inorder(node):
         print(node.val, end=" ")
         inorder(node.right)
 
-## ITERATIVELY : 
+## ITERATIVELY :  inorder traversal
 def DFS(root):
-    stack = [root]
-    visited = set()
+    stack = []
     result = []
+    cur = root
 
-    while stack:
-        curNode = stack.pop()
+    while cur or stack:
+        if cur:
+            stack.append(cur)
+            cur = cur.left
+        else:
+            cur = stack.pop()
+            result.append(cur.val)
+            cur = cur.right
+    return result
 
-        if curNode not in visited:
-            visited.add(curNode)
-            result.append(curNode.val)
-
-            if curNode.left:
-                stack.append(curNode.left)
-            if curNode.right:
-                stack.append(curNode.right)
-    print(result)
-
+        
 
 if __name__ == '__main__':
     root = Node(4)
@@ -50,5 +48,5 @@ if __name__ == '__main__':
     root.right.right = Node(7)
     root.right.left = Node(5)
 
-    # inorderInteratively(root)
-    DFS(root)
+    # In order traversal
+    print(DFS(root))
