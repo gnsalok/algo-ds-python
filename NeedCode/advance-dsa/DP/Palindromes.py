@@ -13,8 +13,10 @@ def longest(s):
 def helper(s, l, r):
     maxLength = 0
     while l >= 0 and r < len(s) and s[l] == s[r]:
-        if (r - l + 1) > maxLength:
-            maxLength = r - l + 1
+        maxLength = max(maxLength, r - l + 1)
         l -= 1
         r += 1
     return maxLength
+
+str = "abaab"
+print(longest(str)) # result = 4
