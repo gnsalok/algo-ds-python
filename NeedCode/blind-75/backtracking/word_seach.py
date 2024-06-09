@@ -2,6 +2,8 @@
 Word Search
 https://leetcode.com/problems/word-search/
 
+TC : O(n * m * dfs)   ; dfs -> 4^len(word)
+
 '''
 
 class Solution:
