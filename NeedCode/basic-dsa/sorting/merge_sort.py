@@ -1,6 +1,10 @@
-## ---------------------------------------------------
+'''
 # Merge Sort Simplify with Python
-## ---------------------------------------------------
+
+TC : Log N (best and avg case) ; Worst Case : N^2
+SC : O(N)
+
+'''
 
 def merge_sort(data):
     if len(data) <= 1:

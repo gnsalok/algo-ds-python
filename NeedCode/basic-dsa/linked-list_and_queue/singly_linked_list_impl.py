@@ -21,7 +21,6 @@ class LinkedList:
         while  index > 0 and curr:
             index -= 1
             curr = curr.next
-        
         # Remove the node ahead of curr
         # this will loop through one node before actual node at index
         if curr and curr.next:

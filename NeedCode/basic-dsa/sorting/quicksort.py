@@ -1,17 +1,22 @@
 '''
 Quick Sort 
 
+Time complexity
+
 - If input is sorted, then tree/partition height will increase, which is worst case. Then TC. O(N^2)
 - In avg. TC is O(N log n)
-TC : O N
 
+
+SC : 
+- AVG Case : log N 
+- Worst : O(n)
 '''
 
 # Implementation of QuickSort
 def quickSort(arr, s, e):
     # length of sub-array is <= 1 then arr is already sorted.
     if e - s + 1 <= 1:
-        return
+        return arr
 
     pivot = arr[e]
 
@@ -27,8 +32,7 @@ def quickSort(arr, s, e):
             arr[i] = tmp
             left += 1
 
-    # Move pivot in-between ; replacing left ptr to pivot
-    # arr[e] is nothing but pivot.
+    # Move pivot in-between left & right sides
     arr[e] = arr[left]
     arr[left] = pivot
     
@@ -40,3 +44,6 @@ def quickSort(arr, s, e):
 
     return arr
     
+input = [3,2,4,1,6]
+sortedArr = quickSort(input, 0, len(input)-1)
+print(sortedArr)
