@@ -1,6 +1,8 @@
 '''
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
+TC : O(N)
+SC : O(1)
 '''
 
 # Definition for singly-linked list.
