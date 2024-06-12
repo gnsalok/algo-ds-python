@@ -17,7 +17,13 @@ class LinkedList:
 
     def remove(self, index):
         curr = self.head # head is pointing to ListNode(-1) ; technically 0th node is -1 which needs to exclude
-    
+
+        '''
+        NOTE :
+        If index > 0 - means Linked List start count with 0 -> 0th Node = 1
+        If index > 1 - means Linked List start with count 1 -> 1st Node = 1
+        
+        '''
         while  index > 0 and curr:
             index -= 1
             curr = curr.next
