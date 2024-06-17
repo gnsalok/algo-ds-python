@@ -1,3 +1,11 @@
+'''
+Count the unique paths from the top left to the bottom right. 
+A single path may only move along 0's and can't visit the same cell more that once.
+
+
+TC : 4^N*M         - where 4 is the branches of each cell in the grid to find way to reach destination.
+'''
+
 # Matrix (2D Grid)
 grid = [[0, 0, 0, 0],
         [1, 1, 0, 0],
