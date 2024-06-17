@@ -15,6 +15,8 @@ grid = [[0, 0, 0, 0],
 # Count paths (backtracking)
 def dfs(grid, r, c, visit):
     ROWS, COLS = len(grid), len(grid[0])
+
+    # if any TRUE then return 0
     if (min(r, c) < 0 or
         (r == ROWS or c == COLS) or # check r and c are not going above grid's rows and columns
         (r, c) in visit or grid[r][c] == 1):
