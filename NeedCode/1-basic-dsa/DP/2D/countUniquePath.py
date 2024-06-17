@@ -42,18 +42,19 @@ def memoization(r, c, rows, cols, cache):
 
 # Dynamic Programming - Time: O(n * m), Space: O(m), where m is num of cols
 # If you understand properly this would be good solution with space optimization
-def dp(rows, cols):
-    prevRow = [0] * cols # first all values will be zero
+def dp(m, n):
+    row = [1] * n
 
-    for r in range(rows-1, -1, -1):
-        curRow = [0] * cols
-        curRow[cols - 1] = 1
+    for i in range(m-1):
+        newRow = [1] * n
 
-        # skip right most cell, as it's already will be one path in the last
-        for c in range(cols-2, -1, -1):
-            curRow[c] = curRow[c + 1] + prevRow[c] # see the dry run in GoodNotes
-        prevRow = curRow
-    return prevRow[0]
+        for j in range(n-2, -1, -1):
+            newRow[j] =  newRow[j+1] + newRow[j]
+
+        row =  newRow
+    return row[0]
+
+
 
 print(dp(4, 4))
 
