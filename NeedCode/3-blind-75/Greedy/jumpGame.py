@@ -10,6 +10,9 @@ class Solution:
         goal = len(nums) - 1
 
         for i in range(len(nums) - 1, -1, -1):
+            '''This his means that if you start at index `i` and jump `nums[i]` 
+            steps, you can either reach or go beyond the current `goal`
+            '''
             if i + nums[i] >= goal:
                 goal = i
             
