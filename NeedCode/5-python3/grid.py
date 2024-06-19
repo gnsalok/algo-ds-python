@@ -1,3 +1,5 @@
+
+        # COLS            # ROWS
 grid = [[0]*4 for row in range(3)]
 
 print(grid) # [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]

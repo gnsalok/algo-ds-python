@@ -27,5 +27,8 @@ for key in myMap:
 for val in myMap.values():
     print(val)
 
+for key in myMap.keys():
+    print(key)
+
 for key, val in myMap.items():
     print(key, val)
