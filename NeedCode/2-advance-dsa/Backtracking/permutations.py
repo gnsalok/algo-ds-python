@@ -44,4 +44,13 @@ Iterate over unused numbers:
     - Removing num from the current_perm list.
     - Removing num from the used set to allow it for future permutations.
 
+               []
+              / | \
+            1  2  3
+           /|  /|  |\
+          2 3 1 3  1 2
+         /  /  /    /  \
+        3  2  3    2    1
+      [1,2,3] [1,3,2] [2,1,3] [2,3,1] [3,1,2] [3,2,1]
+
 '''

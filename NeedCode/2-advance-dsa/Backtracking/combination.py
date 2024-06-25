@@ -7,6 +7,7 @@ def combinations(n, k):
     return combs
 
 def helper(i, curComb, combs, n, k):
+    # base case is K here
     if len(curComb) == k:
         combs.append(curComb.copy())
         return
