@@ -21,4 +21,27 @@ class Solution:
         else:
             return False
 
-        
+
+#-- Simple Solution 
+
+
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+
+        goal = len(nums) - 1 # which will be last index
+
+        maxSoFar = 0
+
+        for i, n in enumerate(nums):
+
+            # it means you can't reach me
+            if i > maxSoFar:
+                return False 
+
+            curMax = i + n
+            maxSoFar = max(maxSoFar, curMax)
+
+        if maxSoFar >= goal:
+            return True
+        else:
+            return False
