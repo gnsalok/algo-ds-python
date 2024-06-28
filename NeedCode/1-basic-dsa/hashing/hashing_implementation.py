@@ -27,7 +27,7 @@ class HashMap:
             if self.map[index].key == key:
                 return self.map[index].val
             index += 1
-            index = index % self.capacity
+            index = index % self.capacity # this is to make sure we are in-bound, not exceed array
         return None
 
     def put(self, key, val):
@@ -61,7 +61,7 @@ class HashMap:
                 self.size -= 1
                 return
             index += 1
-            index = index % self.capacity
+            index = index % self.capacity # this is to make sure we are in-bound, not exceed array
 
     def rehash(self):
         self.capacity = 2 * self.capacity
