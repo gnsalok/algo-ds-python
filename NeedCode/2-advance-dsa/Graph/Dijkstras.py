@@ -14,7 +14,7 @@ def shortestPath(edges, n, src):
     for s, d, w in edges:
         adj[s].append([d, w])
 
-    shortest = {}
+    shortest = {} # replace shortest with visited ; if confusion
     minHeap = [(0, src)]
     while minHeap:
         w1, n1 = heapq.heappop(minHeap)
