@@ -6,10 +6,11 @@ TC : O(N + P) ; where N is no. of course and P in pre-requisite
 
 
 import collections
+from typing import List
 
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        preMap = defaultdict(list)
+        preMap = collections.defaultdict(list)
 
         for crs, pre in prerequisites:
             preMap[crs].append(pre)

@@ -2,7 +2,7 @@ import heapq
 
 # Sample data and desired number of top elements (largest)
 data = [10, 5, 12, 3, 7, 18]
-k = 3
+k = 4
 
 # Create a max-heap (largest element at the root) using the first k elements
 heap = data[:k]
@@ -18,4 +18,4 @@ for num in data[k:]:
     heapq.heapreplace(heap, num)
 
 # The heap now contains the k largest elements
-print(heap)  # Output: [12, 18, 10] (largest elements based on k)
+print(heap)  # Output: [10, 18, 12] (largest elements based on k)

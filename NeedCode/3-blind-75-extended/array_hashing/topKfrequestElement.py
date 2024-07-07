@@ -26,6 +26,8 @@ class Solution:
                 buckets[freq] = [num]
             else:
                 buckets[freq].append(num)
+
+        print(buckets)
         
         kFreqElements = []
 
@@ -39,17 +41,3 @@ class Solution:
 nums = [1,2,2,2,3,3,3]
 sl = Solution()
 print(sl.topKFrequent(nums, 2))
-
-           
-
-
-       
-        
-    
-
-
-
-
-
-sl = Solution()
-sl.topKFrequent([1,1,4,2,2,3], 2)
