@@ -1,5 +1,8 @@
 '''
 https://leetcode.com/problems/number-of-islands/
+
+Time Complexity: O(rows * cols)
+Space Complexity: O(rows * cols)
 '''
 
 import collections
