@@ -16,7 +16,7 @@ class Solution:
                     '''
                     coin = 4
                     amount we want to calculate is = 7
-                    dp[7] = 1 + dp[4-3] could be one possible solution ; here 1 is for coin
+                    dp[7] = 1 + dp[7-4] could be one possible solution ; here 1 is for coin
                     '''
 
                     # this is recurrence relation
