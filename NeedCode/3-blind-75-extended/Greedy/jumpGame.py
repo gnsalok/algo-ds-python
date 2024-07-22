@@ -19,6 +19,7 @@ Note:
 If there is 0 in the array you cant reach to the end. Array without 0 is will lead to you result.
 
 '''
+from typing import List
 
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
@@ -28,8 +29,10 @@ class Solution:
             '''This his means that if you start at index `i` and jump `nums[i]` 
             steps, you can either reach or go beyond the current `goal`
             '''
+
             if i + nums[i] >= goal:
                 goal = i
+                print(goal)
             
         if goal == 0:
             return True
@@ -37,26 +40,30 @@ class Solution:
             return False
 
 
-#-- Simple Solution 
+#-- Simple Solution - if above one is confusing
 
 
-class Solution:
-    def canJump(self, nums: List[int]) -> bool:
+# class Solution:
+#     def canJump(self, nums: List[int]) -> bool:
 
-        goal = len(nums) - 1 # which will be last index
+#         goal = len(nums) - 1 # which will be last index
 
-        maxSoFar = 0
+#         maxSoFar = 0
 
-        for i, n in enumerate(nums):
+#         for i, n in enumerate(nums):
+#             # it means you can't reach me
+#             if i > maxSoFar:
+#                 return False 
 
-            # it means you can't reach me
-            if i > maxSoFar:
-                return False 
+#             curMax = i + n
+#             maxSoFar = max(maxSoFar, curMax)
+#             print(curMax, maxSoFar)
 
-            curMax = i + n
-            maxSoFar = max(maxSoFar, curMax)
-
-        if maxSoFar >= goal:
-            return True
-        else:
-            return False
+#         if maxSoFar >= goal:
+#             return True
+#         else:
+#             return False
+        
+nums = [2,3,1,1,4]
+sl = Solution()
+print(sl.canJump(nums))
