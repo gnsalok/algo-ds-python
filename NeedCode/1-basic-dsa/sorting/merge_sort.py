@@ -1,7 +1,7 @@
 '''
 # Merge Sort Simplify with Python
 
-TC : Log N (best and avg case) ; Worst Case : N^2
+TC : N Log N (best and avg case) ; Worst Case : N^2
 SC : O(N)
 
 '''
