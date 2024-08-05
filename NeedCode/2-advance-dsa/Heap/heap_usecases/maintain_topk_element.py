@@ -1,5 +1,9 @@
 import heapq
 
+'''
+This will reduce the time complexity from O(n logn) to O(n logk)
+'''
+
 # Sample data and desired number of top elements (largest)
 data = [10, 5, 12, 3, 7, 18]
 k = 4
