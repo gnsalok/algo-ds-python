@@ -39,3 +39,9 @@ def helper2(i, curComb, combs, n, k):
         curComb.append(j)
         helper2(j + 1, curComb, combs, n, k)
         curComb.pop()
+
+
+# --- MAIN
+n = 5
+k = 2
+print(combinations(n, k))

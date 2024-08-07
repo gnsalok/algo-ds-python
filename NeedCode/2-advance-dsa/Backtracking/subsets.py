@@ -18,7 +18,6 @@ def helper(i, nums, curSet, subsets):
     # decision NOT to include nums[i]
     helper(i + 1, nums, curSet, subsets)
 
-
 '''
 - With Duplicate
 
