@@ -3,7 +3,7 @@ Quick Sort
 
 Time complexity
 
-- If input is sorted, then tree/partition height will increase, which is worst case. Then TC. O(N^2)
+- If input is sorted, then tree/partition height will increase, which is worst case.
 - In avg. TC is O(N log n)
 
 
