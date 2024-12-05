@@ -5,10 +5,11 @@ Time complexity
 
 - If input is sorted, then tree/partition height will increase, which is worst case.
 - In avg. TC is O(N log n)
+- Worst Case : O(n^2)
 
 
 SC : 
-- AVG Case : log N 
+- Best and average Case : log N 
 - Worst : O(n)
 '''
 
