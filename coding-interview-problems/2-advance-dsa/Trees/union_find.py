@@ -2,6 +2,7 @@
 Union Find (Disjoint Set)
 
 Time complexity : O(m) ; where m in no. of edges
+- If you do both optimization ie. "Path compression" and "Union by Rank" then TC will be a Ackermann function 𝑂(𝛼(𝑛)) which is a equivalent to Constant time operation.
 
 Where,
 - doing Union is constant time operation.
