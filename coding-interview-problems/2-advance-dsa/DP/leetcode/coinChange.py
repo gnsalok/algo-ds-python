@@ -24,4 +24,32 @@ class Solution:
         return dp[-1] if dp[-1] != float("inf") else -1
                  
 
+
+# ----
+# Solution with memoization
+
+'''
+Time complexity: O(length of count ∗ amount)
+Space complexity: O(amount)
+'''
+
+
+def coinChange(amount, coins):
+    memo = {}
+    def dfs(amount):
+        if amount == 0:
+            return 0
+
+        if amount in memo:
+            return memo[amount]
         
+        res = float("inf")
+
+        for coin in coins:
+            if amount - coin >= 0:
+                res = min(res, 1 + dfs(amount - coin))
+            memo[amount] = res
+        return res
+
+    minCoins = dfs(amount)
+    return -1 if minCoins >= float("inf") else minCoins
