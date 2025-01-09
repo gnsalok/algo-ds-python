@@ -26,7 +26,7 @@ class Solution:
 
             while q:
                 row, col = q.popleft()
-                            # right, left,    up,      down
+                            # down,   up,     left,  right  # visualize in matrix [[]*col for _ in range(row)]
                 directions = [[1,0], [-1,0], [0,-1], [0,1]]
 
                 for dr, dc in directions:
