@@ -45,6 +45,7 @@ def helper2(i, nums, curSet, subsets):
     curSet.pop()
 
     # decision NOT to include nums[i]
+    # keep skipping when neighbors have the same values
     while i + 1 < len(nums) and nums[i] == nums[i + 1]:
         i += 1
     helper2(i + 1, nums, curSet, subsets)
