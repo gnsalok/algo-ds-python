@@ -1,6 +1,6 @@
 ''''
 Coin Change : https://leetcode.com/problems/coin-change/
-Time : O (amount * len(coin))
+Time : O (amount * len(coin array)) ; 
 space : O (amount) -> DP 
 '''
 

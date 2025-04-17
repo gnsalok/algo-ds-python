@@ -11,6 +11,13 @@
         "algo-ds-java/learning-java",
         "algo-ds-java/Array",
         "algo-ds-java/leetcode-java/javanotes"
-    ]
+    ],
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false,
+        "python": false
+    }
 }
 
