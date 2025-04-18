@@ -7,8 +7,7 @@
 
 '''
 # Memoization 
-def fib(n):
-    mem = {}
+def fib(n, mem={0:0, 0:1}):
     if n <= 1:
         return n
     if n in mem:
