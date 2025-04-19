@@ -16,9 +16,7 @@ def bfs(root):
     
     level = 0
     while len(queue) > 0:
-        print("level: ", level)
-        qLenAtLevel = len(queue)
-        for i in range(qLenAtLevel):
+        for i in range(len(queue)):
             curr = queue.pop(0)
             print(curr.val)
             if curr.left:
