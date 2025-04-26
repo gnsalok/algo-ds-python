@@ -22,9 +22,8 @@ class LinkedList:
         NOTE :
         If index > 0 - means Linked List start count with 0 -> 0th Node = 1
         If index > 1 - means Linked List start with count 1 -> 1st Node = 1
-        
         '''
-        while  index > 0 and curr:
+        while  index > 1 and curr:
             index -= 1
             curr = curr.next
         # Remove the node ahead of curr
@@ -47,9 +46,9 @@ ll = LinkedList()
 
 
 
-ll.insertEnd(1) # 0th node
-ll.insertEnd(2) # 1st node
-ll.insertEnd(3) # 2nd node
+ll.insertEnd(1) # 1st node
+ll.insertEnd(2) # 2nd node
+ll.insertEnd(3) # 3rd node
 
 ll.remove(1)
 
