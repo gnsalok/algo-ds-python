@@ -17,7 +17,8 @@
         "plaintext": false,
         "markdown": true,
         "scminput": false,
-        "python": false
+        "python": true,
+        "go": false
     }
 }
 
