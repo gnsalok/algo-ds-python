@@ -10,12 +10,12 @@ Fast and Slow pointers in Linked List
 
 # Find the middle of a linked list with two pointers.
 # Time: O(n), Space: O(1)
-def middleOfList(self):
-    slow, fast = self.head.next, self.head.next
+def middleOfList(self, head):
+    slow, fast = head, head
     while fast and fast.next:
         slow = slow.next
         fast = fast.next.next
-    return slow.val     
+    return slow
 
 # Determine if the linked list contains a cycle.
 # Time: O(n), Space: O(1)
