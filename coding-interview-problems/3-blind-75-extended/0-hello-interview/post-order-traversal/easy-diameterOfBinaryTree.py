@@ -3,7 +3,10 @@ Problem : Diameter of Binary Tree
 Given the root of a binary tree, return the length of the diameter of the tree.
 The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
 The length of a path between two nodes is represented by the number of edges between them.
+Note: diameter of a BT is between two leaf nodes of a tree.
 
+
+Solution : Post Order traversal is Bottom-up approach, and make TC of this problem in O(n).
 '''
 
 class TreeNode:
@@ -42,12 +45,15 @@ def diameterOfBinaryTree(root):
 # Example usage:
 if __name__ == "__main__":
     # Create a sample binary tree
-    root = TreeNode(1)
-    root.left = TreeNode(2)
-    root.right = TreeNode(3)
-    root.left.left = TreeNode(4)
+    root = TreeNode(3)
+    root.left = TreeNode(9)
+    root.left.left = TreeNode(1)
+    root.left.left.left = TreeNode(3)
+    root.left.left.right = TreeNode(5)
+
+    root.right = TreeNode(2)
     root.left.right = TreeNode(5)
 
     # Calculate the diameter of the binary tree
-    print("Diameter of the binary tree:", diameterOfBinaryTree(root))  # Output: 3
+    print("Diameter of the binary tree:", diameterOfBinaryTree(root))  # Output: 4
 
