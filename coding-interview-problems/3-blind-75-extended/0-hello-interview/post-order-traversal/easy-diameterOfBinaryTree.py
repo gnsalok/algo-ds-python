@@ -1,12 +1,16 @@
 '''
-Problem : Diameter of Binary Tree
+Problem : Diameter of Binary Tree : https://leetcode.com/problems/diameter-of-binary-tree/description/
+
 Given the root of a binary tree, return the length of the diameter of the tree.
-The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
-The length of a path between two nodes is represented by the number of edges between them.
-Note: diameter of a BT is between two leaf nodes of a tree.
+
+- The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
+- The length of a path between two nodes is represented by the number of edges between them.
+- Note: diameter of a BT is between two leaf nodes of a tree.
 
 
-Solution : Post Order traversal is Bottom-up approach, and make TC of this problem in O(n).
+Solution : 
+Post Order traversal is Bottom-up approach, and make TC of this problem in O(n). 
+If you calculate, top down TC become O(n^2) which is not good.
 '''
 
 class TreeNode:
@@ -17,15 +21,7 @@ class TreeNode:
 
 def diameterOfBinaryTree(root):
     max_diameter = 0
-    '''
-    Calculate the diameter of a binary tree.
 
-    Args:
-    root: TreeNode, the root of the binary tree.
-
-    Returns:
-    int, the diameter of the binary tree.
-    '''
     def dfs(node):
         nonlocal max_diameter
         if not node:
@@ -34,11 +30,13 @@ def diameterOfBinaryTree(root):
         left_height = dfs(node.left)
         right_height = dfs(node.right)
 
-
+        # calculate longest path to each node just after recursion - Post order traversal
         max_diameter = max(max_diameter, left_height + right_height)
         return 1 + max(left_height, right_height)
 
-    
+    '''
+    Note that only returning max_diameter in the end, not return value of "dfs" function call.
+    '''
     dfs(root)
     return max_diameter
 
