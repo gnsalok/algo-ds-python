@@ -1,62 +1,158 @@
-# Algorithms and Data Structures in Python
+# Algorithms and Data Structures using Python
 
 ![Python Version](https://img.shields.io/badge/python-3.x-blue.svg) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/gnsalok/algo-ds-python/blob/main/LICENSE)
 
-Welcome to the "Algorithms and Data Structures in Python" repository! This repository serves as a comprehensive collection of various algorithms and data structures implemented using Python 3.
+Welcome to the "Algorithms and Data Structures in Python" repository! This is a comprehensive learning resource that covers fundamental algorithms and data structures implemented in Python 3. Whether you're a student learning computer science concepts, a developer looking to strengthen your algorithmic thinking, or someone preparing for technical interviews, this repository aims to help you understand these crucial concepts through practical Python implementations.
 
-## Prerequisites
+## 📚 Learning Path
 
-To make the most out of this repository, it is recommended to have a basic understanding of Python programming language. If you are new to Python, you can start with the [Python Quickstart](https://developers.google.com/edu/python/introduction) guide provided by Google Developers.
+This repository is organized to provide a structured learning path. Each topic includes:
+- Theoretical explanations / Problems links
+- Python implementations
+- Example use cases
+- Time and space complexity analysis
+- Visual explanations (where applicable)
 
-### Downloading and Installing
+## 🔧 Prerequisites
 
-To begin, you will need to download and install Python on your local machine. The latest version of Python can be obtained from the [Python website](https://www.python.org/downloads/). Once installed, ensure that Python is set up correctly by adding it to your environment variables. If you need assistance with this step, you can refer to [this video tutorial](https://www.youtube.com/watch?v=1jyOHCTgWpg) by Alok Tripathi.
+- Basic understanding of Python programming or Look at [`./coding-interview-problems/5-python3/`](./coding-interview-problems/5-python3/) guide.
+- Python 3.x installed on your machine
+- Familiarity with basic programming concepts (variables, loops, functions)
 
-## Implemented Solutions
+### Setting Up Your Environment
 
-In this repository, we have provided a wide range of solutions for different algorithms and data structures. The following topics are covered:
+1. Install Python from the [official Python website](https://www.python.org/downloads/)
+2. Clone this repository:
+   ```bash
+   git clone https://github.com/gnsalok/algo-ds-python.git
+   cd algo-ds-python
+   ```
 
-* Loops and Recursion
-* Arrays and Matrices
-* Linked Lists
-* Queues
-* Stacks
-* Heaps
-* Sets and Hash Maps
-* Trees
-* Binary Search
-* Graphs
-* DFS, BFS, and Backtracking
-* Tries
-* Merge Sort and Quick Sort
+## 📖 Data Structures
 
-## Resources 
-- Think like programmer : https://www.youtube.com/playlist?list=PLKQ5LYb497AZIZe9dBWy8GwLluVaMQVj0
-- Recursion : https://youtube.com/watch?v=oKndim5-G94&t=0s
-- Backtracking : https://www.youtube.com/watch?v=gBC_Fd8EE8A&list=PLKQ5LYb497AZIZe9dBWy8GwLluVaMQVj0&index=22&t=655s
-- Dynamic Programming : https://www.youtube.com/watch?v=iv_yHjmkv4I
+### Basic Data Structures
+1. **Arrays and Lists**
+   - Dynamic arrays
+   - Multi-dimensional arrays
+   - Array operations and their complexity
 
-## Other Important Problems for Interviews
+2. **Linked Lists**
+   - Singly linked lists
+   - Doubly linked lists
+   - Circular linked lists
+   - Common operations and their implementations
 
-Apart from the core topics, we have included solutions for various important problems that often arise during technical interviews:
+3. **Stacks and Queues**
+   - Stack implementations and applications
+   - Queue variations (simple queue, circular queue)
+   - Priority queues
+   - Deques (double-ended queues)
 
-* Dynamic Programming (Memoization and Divide-and-Conquer)
-* Problems with Multiple Pointers or Sliding Windows
-* Greedy Algorithms
-* Logical/Mathematical Proof Techniques (contradiction, contrapositive, induction, cases)
-* Object-Oriented Programming (It is recommended to check out "Clean Code" by Robert Martin, especially the sections on the Single Responsibility Principle. Though not crucial for interviews, it is valuable to know.)
+### Advanced Data Structures
+1. **Trees**
+   - Binary trees
+   - Binary search trees (BST)
+   - AVL trees
+   - Red-black trees
+   - B-trees
+   - Segment trees
 
-## Lead Maintainer
+2. **Heaps**
+   - Min heaps
+   - Max heaps
+   - Heap operations
+   - Heapify process
 
-* **Alok Tripathi** - *Github* - [Alok Tripathi](https://github.com/gnsalok)
+3. **Hash-Based Structures**
+   - Hash tables
+   - Hash maps
+   - Collision resolution techniques
+   - Hash functions
 
-### Follow Me
+4. **Graphs**
+   - Graph representations (adjacency matrix, adjacency list)
+   - Weighted and unweighted graphs
+   - Directed and undirected graphs
 
-Stay updated and follow me on various platforms:
+5. **Tries**
+   - Basic trie operations
+   - Prefix trees
+   - Applications in string processing
 
-* [Alok Tripathi - YouTube](https://www.youtube.com/channel/UCkSvvRVme7nqWIIsshg5kfg?view_as=subscriber)
-* [Alok Tripathi - Quora](https://www.quora.com/profile/Alok-Tripathi-42)
+## 🎯 Algorithms
 
-## License
+### Searching Algorithms
+- Linear search
+- Binary search
+- Interpolation search
+- Jump search
+
+### Sorting Algorithms
+- Bubble sort
+- Selection sort
+- Insertion sort
+- Merge sort
+- Quick sort
+- Heap sort
+- Counting sort
+- Radix sort
+
+### Graph Algorithms
+- Depth-First Search (DFS)
+- Breadth-First Search (BFS)
+- Dijkstra's algorithm
+- Bellman-Ford algorithm
+- Kruskal's algorithm
+- Prim's algorithm
+
+### Pattern Matching and String Algorithms
+- KMP algorithm
+- Rabin-Karp algorithm
+- Boyer-Moore algorithm
+- String matching and manipulation
+
+### Advanced Algorithmic Techniques
+1. **Recursion**
+   - Base cases and recursive cases
+   - Recursive problem-solving
+   - Stack frames and memory usage
+
+2. **Dynamic Programming**
+   - Memoization
+   - Tabulation
+   - Common DP patterns
+
+3. **Greedy Algorithms**
+   - Activity selection
+   - Huffman coding
+   - Fractional knapsack
+
+4. **Backtracking**
+   - State space tree
+   - Constraint satisfaction
+   - Optimization problems
+
+> [!NOTE] : Few topics are not covered yet. Feel free to contribute.
+
+## 📚 Learning Resources
+
+### Online Resources
+- [Think Like a Programmer](https://www.youtube.com/playlist?list=PLKQ5LYb497AZIZe9dBWy8GwLluVaMQVj0)
+- [Recursion Fundamentals](https://youtube.com/watch?v=oKndim5-G94)
+- [Backtracking Concepts](https://www.youtube.com/watch?v=gBC_Fd8EE8A)
+- [Dynamic Programming Guide](https://www.youtube.com/watch?v=iv_yHjmkv4I)
+- [Recursion and Backtracking](https://www.youtube.com/watch?v=ZztKT-KVqwA&t=1s)
+- [Post Order Traversal](https://www.youtube.com/watch?v=suPO02S0cR8&t=875s)
+
+## 👨‍💻 Lead Maintainer
+
+<img src="https://github.com/gnsalok.png" alt="Alok Tripathi" width="100">
+
+### Connect With Me
+
+* [LinkedIn](https://www.linkedin.com/in/aloktrip/)
+
+
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.

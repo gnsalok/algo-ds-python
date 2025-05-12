@@ -22,6 +22,8 @@ class Solution:
             left_sum = max(dfs(node.left), 0)
             right_sum = max(dfs(node.right), 0)
 
+            # current_sum uses both, but it's only for the purpose of checking a max at this node, 
+            # not for upward recursion.
             current_sum = node.val + left_sum + right_sum
             self.max_sum = max(self.max_sum, current_sum)
 
