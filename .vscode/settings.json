@@ -13,9 +13,9 @@
         "algo-ds-java/leetcode-java/javanotes"
     ],
     "github.copilot.enable": {
-        "*": true,
+        "*": false,
         "plaintext": false,
-        "markdown": true,
+        "markdown": false,
         "scminput": false,
         "python": false,
         "go": false
