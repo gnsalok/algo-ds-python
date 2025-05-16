@@ -2,7 +2,8 @@
 N Queen Problem
 '''
 
-queen = [-1] * 8 # queen[i] -> where is my queen in row i
+
+queen = [-1] * 8 # queen[i] -> where is my queen in row i (0th idx)
 n = 8
 
 def rec(level): # rec -> no. of ways to populate [level  ... n-1] row for a valid configuration
@@ -29,6 +30,7 @@ def rec(level): # rec -> no. of ways to populate [level  ... n-1] row for a vali
         if check(level, col):
             # make the choice ; here, place the queen
             queen[level] = col
+            
 
             # explore the option
             ans += rec(level+1)
