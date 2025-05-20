@@ -13,6 +13,8 @@ x = 6 # skill you case learn
 k = 2 # in 2 no. of problems
 
 Find the maximum skill you can get?
+
+Note : you can solve this problem using DP without explicitly using "check" function.
 '''
 
 n = 0 # TODO: check 

@@ -3,7 +3,7 @@ Similar to variation of climbing stairs problem.
 
 ---
 
-how you write code while following template : level, choice, check, move
+how you write code while following template : "level, choice, check, move"
 
 def rec(level):
     for (all choice):
