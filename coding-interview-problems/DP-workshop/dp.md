@@ -18,3 +18,8 @@ def rec(level):
 
 Whenever a counting problem BASE Case will be 0 or 1.
 
+
+#### Pruning vs Base case
+
+- Base case : A base case is a condition under which the recursion stops.
+- Pruning case: When a branch is abandoned early to save work.
