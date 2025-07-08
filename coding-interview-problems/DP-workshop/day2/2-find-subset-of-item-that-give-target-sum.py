@@ -7,6 +7,8 @@ items = [1, 2, 3, 4, 5]
 target_sum = 9
 
 
+TC : O (n * target_sum) - with memo
+SC : O(n * target_sum)
 
 '''
 
