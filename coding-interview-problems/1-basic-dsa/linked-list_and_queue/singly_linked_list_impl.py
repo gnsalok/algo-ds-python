@@ -16,6 +16,7 @@ class LinkedList:
         self.tail = self.tail.next
 
     def remove(self, index):
+        # curr = self.head.next # skip the dummy node, if you want to make index > 0
         curr = self.head # head is pointing to ListNode(-1) ; technically 0th node is -1 which needs to exclude
 
         '''
