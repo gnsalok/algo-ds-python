@@ -16,14 +16,14 @@ SC :
 # Implementation of QuickSort
 def quickSort(arr, s, e):
     # length of sub-array is <= 1 then arr is already sorted.
+    # you can write s >= e as base case here too.
     if e - s + 1 <= 1:
         return arr
 
     pivot = arr[e]
 
-    # left ptr is for swap the value at the index where pivot is greater the ith Index.
-    # so that we can make sure value at left side of pivot is lesser and right side is greater.
-    left = s # pointer for left side to replace pivot in the end
+    # Partition: elements small than pivot on left side
+    left = s # pointer for left side to replace pivot later
 
     # Partition: elements smaller than pivot on left side
     for i in range(s, e):
@@ -31,6 +31,7 @@ def quickSort(arr, s, e):
             arr[left], arr[i] = arr[i], arr[left]
             left += 1
 
+    # Move the pivot in-between left and right sides
     # Swap pivot (arr[e]) with arr[left] position
     arr[e], arr[left]  = arr[left], arr[e]
 
