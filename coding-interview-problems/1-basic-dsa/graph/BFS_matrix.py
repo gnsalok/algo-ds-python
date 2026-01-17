@@ -3,6 +3,7 @@ Matrix BFS in Grid
 
 Find the length of the shortest path from the top left of the grid to the bottom right.
 
+TC: O(R*C)
 '''
 
 from collections import deque
