@@ -8,9 +8,8 @@ Find the length of the shortest path from the top left of the grid to the bottom
 from collections import deque
 
 def bfs(matrix, start):
-    # Directions for moving in the matrix]
-    #               (row, col) 
-                    # left , right, down, up
+    # Directions for moving in the matrix] ; (r,c)
+                    # up  ,  down,    left,     right
     directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
     
     rows, cols = len(matrix), len(matrix[0])
