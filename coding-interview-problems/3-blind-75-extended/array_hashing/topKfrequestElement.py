@@ -22,7 +22,7 @@ class Solution:
 
         result = []
 
-        for count in range(len(nums), -1, -1):
+        for count in range(len(nums), 0, -1):
 
             # this is bcz list like this -> [[], [2,4]]
             for num in buckets[count]:
