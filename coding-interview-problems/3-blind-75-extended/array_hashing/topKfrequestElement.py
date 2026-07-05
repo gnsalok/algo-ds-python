@@ -6,37 +6,32 @@
 
 '''
 
-from typing import Counter, List
+from typing import List
+
 class Solution:
-
-    '''
-    TC : O N
-    SP : O N
-    '''
-
-    
-    # Solution using hashmap
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        n = len(nums)
-        counter = Counter(nums)
-        buckets = [0] * (n+1)
+        freq = {}
 
-        for num, freq in counter.items():
-            if buckets[freq] == 0:
-                buckets[freq] = [num]
-            else:
-                buckets[freq].append(num)
+        for num in nums:
+            freq[num] = freq.get(num, 0) + 1
 
-        print(buckets)
-        
-        kFreqElements = []
+        buckets = [[] for _ in range(len(nums) + 1)]
 
-        for i in range(n,0,-1):
-            if buckets[i] != 0:
-                kFreqElements.extend(buckets[i])
-            
-            if len(kFreqElements) == k:
-                return kFreqElements
+        for num, count in freq.items():
+            buckets[count].append(num)
+
+        result = []
+
+        for count in range(len(nums), -1, -1):
+
+            # this is bcz list like this -> [[], [2,4]]
+            for num in buckets[count]:
+                result.append(num)
+
+                if len(result) == k:
+                    return result
+
+        return result
             
 nums = [1,2,2,2,3,3,3]
 sl = Solution()
