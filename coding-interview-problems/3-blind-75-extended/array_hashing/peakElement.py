@@ -5,19 +5,26 @@ https://leetcode.com/problems/find-peak-element/description/
 
 
 class Solution:
-    def findPeakElement(self, nums: List[int]) -> int:
-        l, r = 0, len(nums)-1
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        freq = {}
 
-        while l <= r:
-            mid = l + ((r-l)//2)
+        for num in nums:
+            freq[num] = freq.get(num, 0) + 1
 
+        buckets = [[] for _ in range(len(nums) + 1)]
 
-            # left neighbor is greater
-            if mid > 0 and nums[mid] < nums[mid - 1]:
-                r = mid - 1
-            # right neighbor is greater
-            elif mid < len(nums)-1 and nums[mid] < nums[mid + 1]:
-                l = mid + 1
-            else:
-                return mid
-        
+        for num, count in freq.items():
+            buckets[count].append(num)
+
+        result = []
+
+        for count in range(len(nums), -1, -1):
+
+            # this is bcz list like this -> [[], [2,4]]
+            for num in buckets[count]:
+                result.append(num)
+
+                if len(result) == k:
+                    return result
+
+        return result
