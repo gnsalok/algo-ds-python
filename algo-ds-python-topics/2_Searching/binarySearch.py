@@ -4,37 +4,20 @@
     Space : O(1)
 '''
 
+def binarySearch(arr, x):
+    lo, hi = 0, len(arr)
 
-def binarySearch(arr, target):
-    left = 0
-    right = len(arr)-1 
-
-    
-
-    while(left <= right):
-        mid = (left + right) // 2 
-        
-        ## Debug : print left, righ & min 
-        print(left, right, "mid : ", mid)
-        
-        if(arr[mid] == target):
+    while lo < hi:
+        mid = lo + (hi - lo) // 2 # in python (low + hi) // 2 will also work. Problem is in Java and C++
+        if arr[mid] == x:
             return mid
-        #if target is greater than mid then set left to mid+1
-        elif(arr[mid]< target):
-            left = mid+1
+        if arr[mid] > x:
+            hi = mid
         else:
-            right = mid - 1
-    return -1 
+            lo = mid + 1
+    return -1
 
+nums = [-1, 0, 3, 5, 9, 12]
+target = 9
 
-
-if __name__ == "__main__":
-
-    arr = [0, 1, 21, 33, 45, 45, 61, 71, 72, 73]   # sorted array
-    target = 33
-    result = binarySearch(arr, target) #5
-
-    if result != -1:
-        print("Result is present at index %d"% result)
-    else:
-        print("Element is not present in the list.")
+print(binarySearch(nums, target))
