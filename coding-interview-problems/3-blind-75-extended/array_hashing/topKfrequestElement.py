@@ -7,13 +7,11 @@
 '''
 
 from typing import List
+from collections import Counter
 
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        freq = {}
-
-        for num in nums:
-            freq[num] = freq.get(num, 0) + 1
+        freq = Counter(nums)
 
         buckets = [[] for _ in range(len(nums) + 1)]
 
@@ -36,3 +34,36 @@ class Solution:
 nums = [1,2,2,2,3,3,3]
 sl = Solution()
 print(sl.topKFrequent(nums, 2))
+
+
+'''
+- heapq version of it
+
+
+import heapq
+from collections import Counter
+
+def topKFrequent(nums, k):
+    # 1. Count the frequency of every number
+    # Example: [1,1,1,2,2,3] -> {1: 3, 2: 2, 3: 1}
+    count = Counter(nums)
+    
+    # 2. Use a min-heap to keep track of the top k elements
+    heap = []
+    
+    for num, freq in count.items():
+        # Push a tuple of (frequency, number) into the heap
+        # Python's heapq sorts tuples by the first element (frequency)
+        heapq.heappush(heap, (freq, num))
+        
+        # If the heap gets larger than k, remove the one with the smallest frequency
+        if len(heap) > k:
+            heapq.heappop(heap)
+
+    result = []
+    for _,v in heap:
+        result.append(v)
+    return result
+
+
+'''
